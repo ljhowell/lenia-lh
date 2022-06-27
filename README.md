@@ -36,6 +36,9 @@ By Lewis Howell - 201546295
 
 Lenia is a 2D cellular automaton which generalises upon the exemplar system 'Conway's Game of Life', originally devised by the British mathematician John Horton Conway. This system uses a relatively simple set of rules to govern cell birth and death on a discrete board, allowing diverse patterns to emerge and self-organise<sup>[1](https://www.jstor.org/stable/24927642)</sup>. Lenia, which is derived from the word for 'smooth' in Latin, expands upon these concepts, evolving artificial life in a continuous domain<sup>[2](https://arxiv.org/abs/1812.05433)</sup>. Simulations of Lenia reveal many diverse and complex artificial lifeforms which form spontaneously from random initial conditions. This evolution of creatures from the 'primordial soup' has potential implications within the domains of biology and artificial intelligence. 
 
+See the public GitHub repo form the authors of Lenia here: https://github.com/Chakazul/Lenia 
+Online notebook that inspired me to create the CLI tool: https://colab.research.google.com/github/OpenLenia/Lenia-Tutorial/blob/main/Tutorial_From_Conway_to_Lenia_(w_o_results).ipynb
+
 ### What is a cellular automaton?
 
 Clasically, cellular automata operate a set of rules on a discrete grid of cells, updating the values of these cells at each timestep. For example, in Conway's Game of life, at each timestep any cell with two or three neighbours survives, any dead cell with three neighbours becomes a live cell (birth) and any cell with less than two or greater than three neighbours dies (death due to underpopulation or overpopulation)<sup>[1](https://www.jstor.org/stable/24927642)</sup>. 
