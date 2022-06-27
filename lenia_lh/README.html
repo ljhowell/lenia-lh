@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!-- ![image](./assets/header_img.png) -->
+<img src="./assets/header_img.png" alt="drawing" width="800"/>
+<h1 id="evolving-artificial-life-with-lenia-sdt">Evolving Artificial Life with Lenia SDT</h1>
+<h2 id="comp5400m-bio-inspired-computing---assessment-2">COMP5400M Bio-Inspired Computing - Assessment 2</h2>
+<p>By Lewis Howell - 201546295</p>
+<ul>
+<li><a href="#evolving-artificial-life-with-lenia-sdt">Evolving Artificial Life with Lenia SDT</a>
+<ul>
+<li><a href="#comp5400m-bio-inspired-computing---assessment-2">COMP5400M Bio-Inspired Computing - Assessment 2</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#what-is-a-cellular-automaton">What is a cellular automaton?</a></li>
+<li><a href="#what-is-lenia">What is Lenia?</a></li>
+<li><a href="#what-is-the-purpose-of-this-tool">What is the purpose of this tool?</a></li>
+<li><a href="#what-are-the-limitations">What are the limitations?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#install-ffmpeg">Install FFmpeg:</a></li>
+<li><a href="#install-required-python-packages">Install required python packages</a></li>
+</ul>
+</li>
+<li><a href="#running-the-code">Running the code</a>
+<ul>
+<li><a href="#demos">Demos</a>
+<ul>
+<li><a href="#conways-game-of-life">Conway's Game of Life</a></li>
+<li><a href="#smoothlife">SmoothLife</a></li>
+<li><a href="#lenia">Lenia</a></li>
+</ul>
+</li>
+<li><a href="#lenia-lifeforms">Lenia Lifeforms</a>
+<ul>
+<li><a href="#orbium">Orbium</a></li>
+<li><a href="#new-species---hopper">New species(?) - Hopper</a></li>
+<li><a href="#new-species---inversus">New species(?) - Inversus</a></li>
+</ul>
+</li>
+<li><a href="#evolving-new-creatures">Evolving new creatures</a>
+<ul>
+<li><a href="#evolve-kronium-solidus">Evolve kronium solidus</a></li>
+<li><a href="#evolve-orbium-and-save-result-as-json">Evolve orbium and save result as .json</a></li>
+<li><a href="#changing-conditons---loading-from-json">Changing conditons - loading from .json</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Lenia is a 2D cellular automaton which generalises upon the exemplar system 'Conway's Game of Life', originally devised by the British mathematician John Horton Conway. This system uses a relatively simple set of rules to govern cell birth and death on a discrete board, allowing diverse patterns to emerge and self-organise<sup><a href="https://www.jstor.org/stable/24927642">1</a></sup>. Lenia, which is derived from the word for 'smooth' in Latin, expands upon these concepts, evolving artificial life in a continuous domain<sup><a href="https://arxiv.org/abs/1812.05433">2</a></sup>. Simulations of Lenia reveal many diverse and complex artificial lifeforms which form spontaneously from random initial conditions. This evolution of creatures from the 'primordial soup' has potential implications within the domains of biology and artificial intelligence.</p>
+<h3 id="what-is-a-cellular-automaton">What is a cellular automaton?</h3>
+<p>Clasically, cellular automata operate a set of rules on a discrete grid of cells, updating the values of these cells at each timestep. For example, in Conway's Game of life, at each timestep any cell with two or three neighbours survives, any dead cell with three neighbours becomes a live cell (birth) and any cell with less than two or greater than three neighbours dies (death due to underpopulation or overpopulation)<sup><a href="https://www.jstor.org/stable/24927642">1</a></sup>.</p>
+<p>Such systems are generally deterministic, and the result of the simulation depends entirely on the initial state of the board.  Despite this, cellular automata can be used to model a variety of complex systems composed of simple units. By generalising these models to a continuous domain, it is possible to model a variety of diffusion-based phenomena. Cellular automata have been used to model the biological process of morphogenesis which governs pattern formation in nature such as the spots on a cheetah or stripes of a zebra<sup><a href="https://arxiv.org/abs/2002.06112">3</a></sup>. In chemistry, cellular automata can be used to model systems such as the Belousov-Zhabotinsky reaction, a chemical clock which results in beautiful concentric patterns which form spontaneously when the reaction is performed in a petri dish<sup><a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.0c11079">4</a></sup> (see a video of the reaction I performed during my undergraduate degree <a href="https://www.youtube.com/watch?v=gbGxQ4yDSfc">here</a>. At the highest level, some have even described the universe as a cellular automaton, whereby the speed of light governs the rate of updates in a deterministic universe<sup><a href="https://arxiv.org/abs/physics/9907013">5</a></sup>.</p>
+<h3 id="what-is-lenia">What is Lenia?</h3>
+<p>Lenia is a generalised model of earlier 'Life' cellular automata such as Conway's Game of Life and SmoothLife<sup><a href="https://arxiv.org/abs/1111.1567">6</a></sup>. Space, time, and cell states are made continuous such the cells can take any value between zero and one. The neighbourhood is expanded so that cells outside of the immediate proximity are considered (known as an extended Moore neighbourhood). Therefore, a kernel is therefore used which calculates the sum of the neighbours (weighted by the values of the kernel) by convolution with the grid. A generalised growth function is then used to update the cell values instead of count-based rules.</p>
+<p>The kernel for Conway's Game of Life therefore would be a 3x3 matrix with 0 in the centre and 1's surrounding (before normalisation). The growth function is discrete, with value 1 for 3 neighbours and value -1 for &lt; 2 or &gt; 3 neighbours.</p>
+<img src="./assets/kernel_info_conway.png" alt="drawing" width="800"/>
+<p>Lenia uses a Gaussian smoothed ring-like kernel which removes the orthogonal bias. The growth function is also a smooth Gaussian which leads to 'fluid-like' simulations.</p>
+<img src="./assets/kernel_info_lenia.png" alt="drawing" width="800"/>
+<p>More than 400 species have been identified by the authors of Lenia. The morphological characteristics of these species, behavioural dynamics, and ecological niches in the parameter space have been studied. A taxonomic naming system has even been created to classify these creatures into an 'artificial tree of life'. Although questions remain open about the relationship between Lenia's creatures and biological life, it is easy to see how such a system is interesting in the context of biology.</p>
+<h3 id="what-is-the-purpose-of-this-tool">What is the purpose of this tool?</h3>
+<p>This tool was developed formerly as an exercise to better understand the mathematics and computation behind Lenia. Such continuum cellular automata can be challenging to implement and have a variety of applications across the sciences.</p>
+<p>Secondly, although previous implementations of Lenia exist in python, these generally focus on demonstrating the pre-existing species and analysing them, not on the discovery of new species. Since the parameter space of Lenia is large, it is likely that many species still remain undiscovered. For this tool, I aimed to build a system that allows the evolution of novel creatures, hence the Lenia Species Discovery Tool - Lenia SDT.</p>
+<p>This toolkit was built from scratch and allows for the evolution of a variety of existing species in addition to the discovery of new species. So far, two potentially new species have been discovered by the author. The first exhibits unusual bimodal locomotion, switching between 'hopping' and 'jumping' modalities named 'hopper'. The second is an oscillatory creature with four-fold radial symmetry (tetramerism) named 'inversus'. These creatures have yet to be formally verified as new species.</p>
+<h3 id="what-are-the-limitations">What are the limitations?</h3>
+<p>This tool allows the evolution of Lenia species under a variety of conditions. Simulations can be saved as .gif or .mp4 and the parameters can be saved/loaded between experiments as a .json files. The installation and usage are described below.</p>
+<p>In the future, the following improvements could be made:</p>
+<ul>
+<li>Since the focus of this project was to obtain a working prototype, a command-line tool was proposed as the simplest to develop. In future, a GUI tool (such as tkinter) would allow further customisation and the gradual changing of parameters.</li>
+<li>The computation time of simulations could be reduced by migrating from convolution to using Fast-Fourier transforms (<a href="https://en.wikipedia.org/wiki/Convolution_theorem">Convolution theorem</a>)</li>
+<li>Integration of GPU acceleration would also significantly improve system performance.</li>
+<li>AI object detection methods could be used to automatically identify and save new species. This would allow automation of the process.</li>
+</ul>
+<h1 id="installation">Installation</h1>
+<p>Lenia SDT was developed using Python3, with a simple command line interface. It requires a few basic packages and uses FFmpeg to save simulations as .mp4 videos.</p>
+<p>The software was developed in Debian 10 (Linux) but has also been tested working with Windows 10.</p>
+<h2 id="install-ffmpeg">Install FFmpeg:</h2>
+<p>FFmpeg is a open-source software designed for handling video. It is used to save the results of animations.</p>
+<p>Download it here <a href="https://link-url-here.org">https://www.ffmpeg.org/download.html</a></p>
+<p>or via Linux command line (Ubuntu/Debian)</p>
+<pre class="hljs"><code><div>sudo apt update
+
+sudo apt install ffmpeg
+</div></code></pre>
+<p>To check the package has been correctly installed use:</p>
+<pre class="hljs"><code><div>ffmpeg -version
+</div></code></pre>
+<h2 id="install-required-python-packages">Install required python packages</h2>
+<p>This software uses a minimal number of external python packages (numpy, scipy and matplotlib only). To ensure the correct verions are installed, a <code>requirements.txt</code> file alongside a <code>Pipfile.lock</code> are provided.</p>
+<p>If using pip3, the requirements can be installed using:</p>
+<pre class="hljs"><code><div>pip3 install -r requirements.txt
+</div></code></pre>
+<p>or if using pipenv, the requirements can be installed using:</p>
+<pre class="hljs"><code><div>pipenv install
+</div></code></pre>
+<p>Activate the environment using</p>
+<pre class="hljs"><code><div>pipenv shell
+</div></code></pre>
+<h1 id="running-the-code">Running the code</h1>
+<p>Lenia SDT is a command-line interface (CLI) tool which can take a variety of arguments to run different simulations</p>
+<pre class="hljs"><code><div>-------------------------------------------------------------------------------------------
+  _                _          _____ _____ _______ 
+ | |              (_)        / ____|  __ \__   __|
+ | |     ___ _ __  _  __ _  | (___ | |  | | | |   
+ | |    / _ \ '_ \| |/ _` |  \___ \| |  | | | |   
+ | |___|  __/ | | | | (_| |  ____) | |__| | | |   
+ |______\___|_| |_|_|\__,_| |_____/|_____/  |_|  
+ 
+ Welcome to the Lenia Species Discovery Tool.
+ Developed by Lewis Howell for COMP5400M Bio-Inspired Computing - Assessment 2 :)
+ See https://arxiv.org/abs/1812.05433 for the original 2018 paper from the creators of Lenia
+ 
+ For help use python Lenia.py -h
+ -------------------------------------------------------------------------------------------
+ Demos: 
+ python3 Lenia.py --list-demos
+ python3 Lenia.py --demo [DEMO]
+
+ Evolve new species: 
+    python3 Lenia.py -b 16 -k 16 -t 0.1 -m 0.135 -s 0.015 -x 10 -n 200
+
+ or change conditions to see how species change:
+    python3 Lenia.py -i ./datafiles/double_orbium.json -o destroyed_orbium.gif -m 0.11
+-------------------------------------------------------------------------------------------
+          
+</div></code></pre>
+<p>To see the available options use</p>
+<pre class="hljs"><code><div>python3 Lenia.py -h
+</div></code></pre>
+<pre class="hljs"><code><div>Lenia cellular automata - developed by Lewis Howell for COMP5400M Bio-Inspired Computing - Assessment 2
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --conway              Demo Conway's game of Life with random ICs (default: False)
+  --smooth-life         Demo SmoothLife with random ICs (default: False)
+  --lenia               Demo Lenia with random ICs (default: False)
+  --demo [DEMO]         simulate a pre-saved demo. To list the options use --list-demos (default: None)
+  --list-demos          Show the demo options and exit (default: False)
+  -v, --verbose         Verbose (default: False)
+  -c CONFIG, --config CONFIG
+                        path to config file (default: None)
+  -i INFILE, --infile INFILE
+                        path to source file (.json) if using pre-saved data (default: None)
+  -o OUTFILE, --outfile OUTFILE
+                        path to destination file (.gif or .mp4) (default: None)
+  -j JSON, --json JSON  path to store results .json (default: None)
+  -b BOARD_SIZE, --board-size BOARD_SIZE
+                        board size (default: None)
+  -k KERNEL_SIZE, --kernel-size KERNEL_SIZE
+                        kernel size (default: None)
+  -p KERNEL_PEAKS [KERNEL_PEAKS ...], --kernel-peaks KERNEL_PEAKS [KERNEL_PEAKS ...]
+                        kernel peaks (default: None)
+  -m MU, --mu MU        gaussian mean for kernel (mu) (default: None)
+  -s SIGMA, --sigma SIGMA
+                        gaussian stdev for kernel (sigma) (default: None)
+  -t DT, --dt DT        timestep (0-1) (default: None)
+  -n FRAMES, --frames FRAMES
+                        number of frames to simulate (default: None)
+  -x SEED, --seed SEED  the seed for random number generation (default: None)
+</div></code></pre>
+<h2 id="demos">Demos</h2>
+<p>Several demos are provided alongisde the main utility to demonstrate the variety of possible outputs and simulations.</p>
+<h3 id="conways-game-of-life">Conway's Game of Life</h3>
+<p>To run the demo for the classic cellular automata Conway's Game of Life within the generalised Lenia framework run:</p>
+<pre class="hljs"><code><div>python3 Lenia.py --conway
+</div></code></pre>
+<!-- ![Alt Text](./assets/game_of_life.gif) -->
+<img src="./assets/game_of_life.gif" alt="drawing" width="300"/>
+<h3 id="smoothlife">SmoothLife</h3>
+<p>SmoothLife generalises Conway's Game of Life to the continuous domain (continous states, space and time). To simulate SmoothLife with random intital conditions use:</p>
+<pre class="hljs"><code><div>python3 Lenia.py --smooth-life
+</div></code></pre>
+<img src="./assets/smooth_life.gif" alt="drawing" width="300"/>
+<h3 id="lenia">Lenia</h3>
+<p>Lenia uses a smooth growth function and kernel to further generalise SmoothLife. This allows a variety of interesting artificial lifeforms to emerge.</p>
+<p>To run a demo with random intitial conditions use:</p>
+<pre class="hljs"><code><div>python3 Lenia.py --lenia
+</div></code></pre>
+<img src="./assets/lenia.gif" alt="drawing" width="300"/>
+<h2 id="lenia-lifeforms">Lenia Lifeforms</h2>
+<p>Demos can also be run to show some of the lifeforms which have been dicovered and saved using this tool.</p>
+<p>Some of the famous Game of Life Lifeforms such as the gosper-glider-gun are also included to show the generalised Lenia framework can be used to simulate these creatures also.</p>
+<pre class="hljs"><code><div># Get list of demos
+python3 Lenia.py --list-demos 
+
+# Run demo
+python3 Lenia.py --demo [DEMO]
+</div></code></pre>
+<h3 id="orbium">Orbium</h3>
+<p>The famous Lenia trilobite-like glider 'orbium_unicaudatus'.</p>
+<pre class="hljs"><code><div>python3 Lenia.py --demo orbium
+</div></code></pre>
+<img src="./assets/orbium.gif" alt="drawing" width="300"/>
+<h3 id="new-species---hopper">New species(?) - Hopper</h3>
+<p>The novel 'hopper' creature (a new species(?) currently not formally described in the Lenia taxonomy).
+This species exhibits a form of locomotion that may be new in the Lenia ecosystem. The creature moves with two distint modalities - a short 'hop' and a longer 'leap' whith a resting phase between.</p>
+<pre class="hljs"><code><div>python3 Lenia.py --demo hopper -n 1200
+</div></code></pre>
+<img src="./assets/hopper.gif" alt="drawing" width="300"/>
+<h3 id="new-species---inversus">New species(?) - Inversus</h3>
+<p>The novel 'inversus' creature (another new species(?)) with tetramerism (four-fold radial symmetry) which is common in many jellyfish in nature<sup><a href="https://www.bionity.com/en/encyclopedia/Symmetry_%28biology%29.html">7</a></sup>.</p>
+<pre class="hljs"><code><div>python3 Lenia.py --demo inversus -n 500
+</div></code></pre>
+<img src="./assets/inversus.gif" alt="drawing" width="300"/>
+<h2 id="evolving-new-creatures">Evolving new creatures</h2>
+<p>New species can be evolved from the primordial soup (sparse-random matrix) by specifiying the kernel, board size and timestep.</p>
+<h3 id="evolve-kronium-solidus">Evolve kronium solidus</h3>
+<pre class="hljs"><code><div>python Lenia.py --mu 0.24 --sigma 0.029 --kernel-size 32 --kernel-peaks 1 0.3 --dt 0.0666 --seed 0 --board-size 32 --frames 500 -o kronium_sim.gif
+</div></code></pre>
+<img src="./assets/kronium_sim.gif" alt="drawing" width="300"/>
+<h3 id="evolve-orbium-and-save-result-as-json">Evolve orbium and save result as .json</h3>
+<pre class="hljs"><code><div>python3 Lenia.py -b 16 -k 16 -t 0.1 -m 0.135 -s 0.015 -x 10 -n 200 -o double_orbium.gif -j double_orbium.json
+</div></code></pre>
+<img src="./assets/double_orbium.gif" alt="drawing" width="300"/>
+<h3 id="changing-conditons---loading-from-json">Changing conditons - loading from .json</h3>
+<p>Changing the niche (parameter set such as sigma, mu and dt) can cause creatures to morph into new species (or to become unstable!).</p>
+<pre class="hljs"><code><div>python3 Lenia.py -i ./datafiles/double_orbium.json -o destroyed_orbium.gif -m 0.11
+</div></code></pre>
+<img src="./assets/destroyed_orbium.gif" alt="drawing" width="300"/>
+</body>
+</html>

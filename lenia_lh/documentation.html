@@ -1,0 +1,3435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>lenia_lh API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>lenia_lh</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+# Lewis Howell 20/04/22
+
+import numpy as np
+import numpy as np
+from matplotlib import pyplot as plt
+import matplotlib.animation
+import scipy.signal
+import os.path
+import os
+from json import JSONEncoder
+import json
+
+
+class Kernel(object):
+    &#34;&#34;&#34;Class for the kernel used during convolution update of each timestep of Lenia
+    Create a variety of kernels:
+     - Square kernel
+     - (Interpolated) circle kernel
+     - (Interpolated) ring kernel
+     - Gaussian smoothed ring kernel
+     - Multiple ring kernel
+    &#34;&#34;&#34;
+    def __init__(self):
+        self.kernel = self.smooth_ring_kernel(16)
+        
+    def square_kernel(self, 
+                      outer_diameter:int, 
+                      inner_diameter:int,
+                      ) -&gt; np.array:
+        &#34;&#34;&#34;Create a square kernel for Moore neighbourhood, or extended Moore neighbourhood calculation
+        
+        e.g. 3,1 -&gt;
+            111
+            101
+            111
+            
+        e.g. 5,3 -&gt;
+            11111
+            10001
+            10001
+            10001
+            11111
+
+        Args:
+            outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size)
+            inner_diameter (int): The inner diameter of the kernel zeros
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        # Check that both diameters are either odd or even, else kernel is asymmetric
+        if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)): # both even
+            print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+            return None
+        if outer_diameter &lt;= inner_diameter:
+            print(&#39;ERROR: Outer diameter (= {}) must be greater than inner (= {})&#39;.format(outer_diameter,inner_diameter))
+            return None
+
+        inner = np.pad(np.ones([inner_diameter,inner_diameter]),(outer_diameter-inner_diameter) // 2)
+        outer = np.ones([outer_diameter,outer_diameter])
+
+        return outer - inner
+    
+    def circular_kernel(self, 
+                        diameter:int, 
+                        invert:bool=False,
+                        ) -&gt; np.array:
+        &#34;&#34;&#34;Create an interpolated circle kernel. 
+        Used by self.ring_kernel
+        
+        e.g. 5 -&gt;
+        
+        01110
+        11111
+        11111
+        11111
+        01110
+        
+        e.g. 7 -&gt;
+        
+        0011100
+        0111110
+        1111111
+        1111111
+        0111110
+        0011100
+
+        Args:
+            diameter (int): The outer diameter of the kernel (equal to the kernel size)
+            invert (bool, optional): Whether to inver the values. Defaults to False.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        
+
+        mid = (diameter - 1) / 2
+        distances = np.indices((diameter, diameter)) - np.array([mid, mid])[:, None, None]
+        kernel = ((np.linalg.norm(distances, axis=0) - diameter/2) &lt;= 0).astype(int)
+        if invert:
+            return np.logical_not(kernel).astype(int)
+        
+        return kernel
+
+    def ring_kernel(self, 
+                    outer_diameter:int, 
+                    inner_diameter:int
+                    ) -&gt; np.array:
+        &#34;&#34;&#34;Create a binary, interpolated ring-like kernel. 
+        Removes orthogonal bias, allowing isotropic patterns to form.
+
+        Args:
+            outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            inner_diameter (int): The inner diameter of the kernel zeros.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)):
+            print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+            return None
+
+        inner = np.pad(self.circular_kernel(inner_diameter),(outer_diameter-inner_diameter) // 2)
+        outer = self.circular_kernel(outer_diameter)
+
+        return outer - inner
+    
+    def smooth_ring_kernel(self, 
+                           diameter:int, 
+                           mu:float=0.5, 
+                           sigma:float=0.15
+                           ) -&gt; np.array:
+        &#34;&#34;&#34;Generate a smooth ring kernel by applying a bell-shaped (Gaussian) function to the kernel.
+        Used by kernel_shell
+
+        Args:
+            diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+            sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        R = (diameter / 2) + 1 # radius
+        gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+        D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+        
+        return (D&lt;1) * gaussian(D, mu, sigma)
+    
+    def kernel_shell(self, 
+                     diameter:int, 
+                     peaks:np.array(float)=np.array([1/2, 2/3, 1]), 
+                     mu:float=0.5, 
+                     sigma:float=0.15, 
+                     a:float=4.0
+                     ) -&gt; np.array:
+        &#34;&#34;&#34;Extend the kernal to multiple smooth rings (&#39;shells&#39;).
+        The number of shells can be changed by changing the number of items in &#39;peaks&#39;.
+        Shells are created equidistantly from the centre to the diameter.
+        This allows the evolution of more interesting and diverse creatures.
+
+        Args:
+            diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            peaks (np.array, optional): The amplitude of the peaks for the shells, from inner to outer. 
+                Defaults to np.array([1/2, 2/3, 1]).
+            mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+            sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+            a (float, optional): The pre-factor for gaussian smoothing. Defaults to 4.0.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        R = int(diameter / 2) + 1
+        D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+        k = len(peaks)
+        kr = k * D
+
+        peak = peaks[np.minimum(np.floor(kr).astype(int), k-1)]
+        gaussian = lambda x, m, s: a*np.exp(-( (x-m)**2 / (2*s**2) ))
+
+        return (D&lt;1) * gaussian(kr % 1, mu, sigma) * peakv
+    
+    
+class Board(object):
+    &#34;&#34;&#34;Class for the cellular automata board. Holds the state values at each timestep.
+    Initialise boards with different initial conditions:
+        - Ones
+        - Zeros
+        - Random values
+        - Sparse random values 
+        - Gaussian distributed conditions
+        - Radially-symmetric conditions
+    &#34;&#34;&#34;
+    def __init__(self, 
+                 grid_size:int=16, 
+                 seed:int=None):
+        &#34;&#34;&#34;_summary_
+
+        Args:
+            grid_size (int): The size of the array used to store the values for the cellular automata
+            seed (int, optional): The random seed used during board creation. Set the seed to obtain reproducible
+            reults with random boards. Defaults to None.
+            
+        &#34;&#34;&#34;
+        self.grid_size = grid_size
+        self.density = 0.5 # Sparsity
+        self.initialisation_type=&#39;sparse&#39;
+        self.pad = 32
+        
+        self.seed = seed
+    
+        self.board = self.intialise_board()
+        
+    def intialise_board(self) -&gt; np.array:
+        &#34;&#34;&#34;Create an array used to store the values for the cellular automata.
+        
+         Initialise boards with different initial conditions:
+        - Ones
+        - Zeros
+        - Random values
+        - Sparse random values 
+            - Density
+        - Gaussian distributed conditions
+        - Radially-symmetric conditions
+
+        Returns:
+            np.array: The intitialised board at t=0
+        &#34;&#34;&#34;
+        np.random.seed(self.seed)
+        if self.initialisation_type == &#39;zeros&#39;: 
+            self.board = np.zeros([self.grid_size, self.grid_size])
+
+        elif self.initialisation_type == &#39;ones&#39;: 
+            self.board = np.ones([self.grid_size, self.grid_size])
+            
+        elif self.initialisation_type == &#39;random&#39;: 
+            self.board = np.random.rand(self.grid_size, self.grid_size)
+            
+        elif self.initialisation_type == &#39;sparse&#39;: 
+            self.board = scipy.sparse.random(self.grid_size, self.grid_size, density=self.density).A
+            
+        elif self.initialisation_type == &#39;gaussian&#39;:
+            R = self.grid_size/2
+            self.board = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+            
+        elif self.initialisation_type == &#39;ring&#39;:
+            self.board = Kernel().smooth_ring_kernel(32)
+        
+        if self.pad:
+            self.board = np.pad(self.board, self.pad)
+            
+        return self.board  
+    
+class Growth_fn(object):
+    &#34;&#34;&#34;Class for the growth function which is used to update the board based on the neighbourhood sum.
+    This replaces the traditional conditional update used in Conway&#39;s game of life and can be generalised to any
+    continous function. 
+    
+    f(x,y,t+1) = g(k*f(x,y,t))
+    
+    where g is the growth function
+    k is the update kernel 
+    f(x,y,t) is the board state at time t
+    N.b. The operator * is the convolution operator 
+    
+    It consists of growth and shrink parts, which act on the neighbourhood sum to update the board at each timestep.
+    &#34;&#34;&#34;
+    def __init__(self):
+        
+        # Values for Bosco&#39;s update rule
+        self.b1 = 2*0.125
+        self.b2 = 4*0.125
+        self.s1 = 3*0.125
+        self.s2 = 4*0.125
+        
+        # Values for Gaussian update rule
+        self.mu = 0.135
+        self.sigma = 0.015
+        
+        # Use Gaussian by default (Lenia)
+        self.type = &#39;gaussian&#39;
+        if self.type == &#39;gaussian&#39;:
+            self.growth_fn = self.growth_gaussian
+        elif self.type == &#39;bosco&#39;:
+            self.growth_fn = self.growth_bosco
+    
+    def growth_conway(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Conditinal update rule for Conway&#39;s game of life
+        b1..b2 is birth range, s1..s2 is stable range (outside s1..s2 is the shrink range) 
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        return 0 + (U==3) - ((U&lt;2)|(U&gt;3))
+    
+    def growth_bosco(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Bosco&#39;s rule update for an extended Moore neighbourhood
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        return 0 + ((U&gt;=self.b1)&amp;(U&lt;self.b2)) - ((U&lt;self.s1)|(U&gt;=self.s2))
+    
+    def growth_gaussian(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Use a smooth Gaussian growth function to update the board, based on the neighbourhood sum.
+        This is the function used by Lenia to achive smooth, fluid-like patterns.
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+        return gaussian(U, self.mu, self.sigma)*2-1
+
+class NumpyArrayEncoder(JSONEncoder):
+    &#34;&#34;&#34;Custom instace of JSONEncoder.
+    Incorperates automatic serialisation of numpy arrays. 
+    Used to save/load the board and kernel states.  
+    &#34;&#34;&#34;
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return JSONEncoder.default(self, obj)
+        
+class Automaton(Growth_fn):
+    &#34;&#34;&#34;Class for running, animating, loading and saving cellular automata.
+    Used in all siumlations for Lenia and Conways&#39;s game of life.
+
+    &#34;&#34;&#34;
+    def __init__(self, 
+                 board:object, 
+                 kernel:object, 
+                 growth_fn:object, 
+                 dT:float=0.1, 
+                 cmap:str=&#39;viridis&#39;
+                 ):
+        &#34;&#34;&#34;
+        Args:
+            board (object): Instance of Board(). Stores current state of the field
+            kernel (object): Instance of Kernel(). The kernel used to calculate the neighbourhood sum
+            growth_fn (object): Instance of Growth_fn(). The growth function used to compute the update on the neighbourhood sum
+            dT (float, optional): The timestep used. As dT tends to zero, time approaches continuum. Defaults to 0.1.
+            cmap (str, optional): The colourmap used for plotting. Defaults to &#39;viridis&#39;.
+        &#34;&#34;&#34;
+        
+        # Local parameters 
+        self.cmap = cmap
+        self.dT = dT
+        
+        # Kernel paramaters
+        self.kernel = kernel 
+        self.normalise_kernel() # Normalise the kernel 
+        
+        # Growth function parameters
+        self.b1 = growth_fn.b1
+        self.b2 = growth_fn.b2
+        self.s1 = growth_fn.s1
+        self.s2 = growth_fn.s2
+        self.mu = growth_fn.mu
+        self.sigma = growth_fn.sigma
+        self.type = growth_fn.type
+        if self.type == &#39;gaussian&#39;:
+            self.growth = self.growth_gaussian
+        elif self.type == &#39;bosco&#39;:
+            self.growth = self.growth_bosco
+        
+        # The board state
+        self.board = board.board
+        self.board_shape = self.board.shape
+        self.fig, self.img = self.show_board() # Frames of animation
+        
+        self.anim = None # Store the animation
+    
+    def normalise_kernel(self) -&gt; np.array:
+        &#34;&#34;&#34;Normalise the kernel such the values sum to 1. 
+        This makes generalisations much easier and ensures that the range of the neighbourhood sums is independent 
+        of the kernel used. 
+        Ensures the values of the growth function are robust to rescaling of the board/kernel. 
+
+        Returns:
+            np.array: The resulting normlised kernel
+        &#34;&#34;&#34;
+        kernel_norm = self.kernel / (1*np.sum(self.kernel))
+        self.norm_factor = 1/ (1*np.sum(self.kernel))
+        self.kernel = kernel_norm 
+        return kernel_norm
+      
+    def show_board(self, 
+                   display:bool=False,
+                   ):
+        &#34;&#34;&#34;Create figure to display the board. 
+        Used to animate each frame during the simulation.
+
+        Args:
+            display (bool, optional): Show the figure
+
+        Returns:
+            tuple(plt.figure, plt.imshow): Figure and axes items for the board at timestate t.
+        &#34;&#34;&#34;
+        dpi = 50 # Using a higher dpi will result in higher quality graphics but will significantly affect computation
+
+        self.fig = plt.figure(figsize=(10*np.shape(self.board)[1]/dpi, 10*np.shape(self.board)[0]/dpi), dpi=dpi)
+
+        ax = self.fig.add_axes([0, 0, 1, 1])
+        ax.axis(&#39;off&#39;)
+        
+        self.img = ax.imshow(self.board, cmap=self.cmap, interpolation=&#39;none&#39;, aspect=1, vmin=0) #  vmax=vmax
+        
+        if display:
+            plt.show()
+        else: # Do not show intermediate figures when creating animations (very slow)
+            plt.close()
+
+        return self.fig, self.img
+
+    def update_rule_default(self, 
+                            neighbours:np.array
+                            ) -&gt; np.array:
+        &#34;&#34;&#34;Update the board using the classic rules from Conway&#39;s game of life:
+        
+        https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+        Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+        Any live cell with two or three live neighbours lives on to the next generation.
+        Any live cell with more than three live neighbours dies, as if by overpopulation.
+        Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+        Args:
+            neighbours (np.array): The neighbourhood sums U(x,y)
+
+        Returns:
+            np.array: The updated board f(x,y,t+1) at time t+1 
+        &#34;&#34;&#34;
+        r1 = (neighbours == 3) # 3 neighbours -&gt; lives
+        r2 = np.logical_and(self.board, (neighbours == 2)) # 2 neighbours and alive -&gt; lives
+        r3 = np.logical_or(r1,r2).astype(int) # all other -&gt; dead
+        return r3
+    
+    def update_convolutional(self) -&gt; np.array:
+        &#34;&#34;&#34;Update the board state using the convolution method to calculate the neighbourhood sum
+        
+        f(x,y,t+1) = g(k*f(x,y,t))
+        
+        where         
+        f(x,y,t) is the state at time t
+        k is the kernel (e.g. Extended Moore neighbourhood)
+        g is the growth function
+        n.b. the operator &#39;*&#39; represents the convolution operator
+        
+        Returns:
+            np.array: The updated board f(x,y,t+1)
+        &#34;&#34;&#34;
+        
+        # Calculate the neighbourhood sum by convolution with the kernel.
+        # Use periodic boundary conditions to &#39;wrap&#39; the grid in the x and y dimensions
+        neighbours = scipy.signal.convolve2d(self.board, self.kernel, mode=&#39;same&#39;, boundary=&#39;wrap&#39;)
+        
+        # Update the board as per the growth function and timestep dT, clipping values to the range 0..1
+        self.board = np.clip(self.board + self.dT * self.growth(neighbours), 0, 1)
+        
+        return self.board
+        
+    
+    def animate_step(self, i:int) -&gt; plt.imshow:
+        &#34;&#34;&#34;Update the board and perform a single timestep of animation.
+        Used by &#39;animate&#39; to update and render the board after each iteration, returns the relevent frame. 
+
+        Args:
+            i (int): Dummy variable for animation. Represents the frame number
+
+        Returns:
+            plt.axes.imshow: The rendered image of the board at the next timestep
+        &#34;&#34;&#34;
+        
+        self.update_convolutional() # update the board
+        self.img.set_array(self.board) # render the updated state 
+        return self.img,
+    
+    def animate(self, 
+                frames:int, 
+                interval:float=50, 
+                blit=True,
+                ):
+        &#34;&#34;&#34;The main input point for creating a cellular automata animation. 
+        Simulates and renders the cellular automata as a matplotlib.animation.FuncAnimation.
+        This can then be saved using ffmpeg.
+
+        Args:
+            frames (int): The number of frames/timesteps to simulate.
+            interval (float, optional): The time between frames in milliseconds. Defaults to 50.
+            blit (bool, optional): Whether to use blitting to render the images. This improves the performace
+                    by reducing the amount of unnecessary pixel updates. Defaults to False.
+                    https://matplotlib.org/3.5.0/tutorials/advanced/blitting.html
+        &#34;&#34;&#34;
+        # Animate Lenia
+        self.anim = matplotlib.animation.FuncAnimation(self.fig, self.animate_step, 
+                                                frames=frames, interval=interval, save_count=MAX_FRAMES, blit=blit)
+        
+    def save_animation(self, 
+                       filename:str,
+                       ):
+        &#34;&#34;&#34;Save a matplotlib.animation.FuncAnimation using ffmpeg/PIL.
+        
+        Saves in ./outputs by default
+        Supported file types:
+         - .mp4
+         - .gif
+         
+        The file type is inferred from the filename extension
+
+        Args:
+            filename (str): The filename (with extension) to save
+
+        &#34;&#34;&#34;
+        if not self.anim:
+            raise Exception(&#39;ERROR: Run animation before attempting to save&#39;)
+            return 
+        
+        fmt = os.path.splitext(filename)[1] # isolate the file extension
+        
+        try: # make outputs folder if not already exists
+            os.makedirs(OUTPUT_PATH)
+        except FileExistsError:
+            # directory already exists
+            pass
+
+        if fmt == &#39;.gif&#39;:
+            f = os.path.join(OUTPUT_PATH, filename) 
+            writer = matplotlib.animation.PillowWriter(fps=30) 
+            self.anim.save(f, writer=writer)
+        elif fmt == &#39;.mp4&#39;:
+            f = os.path.join(OUTPUT_PATH, filename) 
+            writer = matplotlib.animation.FFMpegWriter(fps=30) 
+            self.anim.save(f, writer=writer)
+        else:
+            raise Exception(&#39;ERROR: Unknown save format. Must be .gif or .mp4&#39;)
+
+    def save_json(self, 
+                  filename:str,
+                  ) -&gt; dict:
+        &#34;&#34;&#34;Create a state dictionary which holds the current values of the board, kernel, growth function parameters
+        and native parameters. Save as a .json file 
+        
+        Allows restoration of a board state at a later time. Used to store species/interesting results.
+        Files are stored in ./datafiles by default.
+        
+        Args:
+            filename (str): The filename (including extension). 
+
+        Returns:
+            dict: The state dict used to create the .json file. 
+        &#34;&#34;&#34;
+        
+        fmt = os.path.splitext(filename)[1]
+        
+        try: # make outputs folder if not already exists
+            os.makedirs(DATA_PATH)
+        except FileExistsError: # directory already exists
+            pass
+        
+        if not fmt == &#39;.json&#39;:
+            raise Exception(&#39;ERROR: Must save as .json&#39;)
+            
+        d_save = {}
+
+        d_save[&#39;dt&#39;] = self.dT
+        d_save[&#39;cmap&#39;] = self.cmap
+
+        d_save[&#39;type&#39;] = self.type
+        d_save[&#39;s1&#39;] = self.s1
+        d_save[&#39;s2&#39;] = self.s2
+        d_save[&#39;b1&#39;] = self.b1
+        d_save[&#39;b2&#39;] = self.b2
+        d_save[&#39;mu&#39;] = self.mu
+        d_save[&#39;sigma&#39;] = self.sigma
+
+        d_save[&#39;board&#39;] = self.board
+        d_save[&#39;kernel&#39;] = self.kernel
+
+        with open(os.path.join(DATA_PATH, filename), &#39;w&#39;) as fp: 
+            json.dump(d_save, fp, cls=NumpyArrayEncoder) # Automatic serialization of numpy arrays
+
+        return(d_save)
+
+    def plot_kernel_info(self,
+                         cmap:str=&#39;viridis&#39;, 
+                         bar:bool=False,
+                         save:str=None,
+                         ) -&gt; None:
+        &#34;&#34;&#34;Display the kernel, kernel cross-section, and growth function as a matplotlib figure.
+
+        Args:
+            kernel (np.array): The kernel to plot
+            growth_fn (object): The growth function used to update the board state
+            cmap (str, optional): The colourmap to use for plotting. Defaults to &#39;viridis&#39;.
+                                (https://matplotlib.org/stable/tutorials/colors/colormaps.html)
+            bar (bool, optional): Plot the kernel x-section as a bar or line plot. Defaults to False.
+            save (str, optional): Save the figure
+        &#34;&#34;&#34;
+        
+        k_xsection = self.kernel[self.kernel.shape[0] // 2, :]
+        k_sum = np.sum(self.kernel)
+        
+        fig, ax = plt.subplots(1, 3, figsize=(14,2), gridspec_kw={&#39;width_ratios&#39;: [1,1,2]})
+        
+        # Show kernel as heatmap
+        ax[0].imshow(self.kernel, cmap=cmap, vmin=0)
+        ax[0].title.set_text(&#39;Kernel&#39;)
+        
+        # Show kernel cross-section
+        ax[1].title.set_text(&#39;Kernel Cross-section&#39;)
+        if bar==True:
+            ax[1].bar(range(0,len(k_xsection)), k_xsection, width=1)
+        else:
+            ax[1].plot(k_xsection)
+        
+        # Growth function
+        ax[2].title.set_text(&#39;Growth Function&#39;)
+        x = np.linspace(0, k_sum, 1000)
+        ax[2].plot(x, self.growth(x))
+        
+        if save:
+            print(&#39;Saving kernel and growth function info to&#39;, os.path.join(OUTPUT_PATH, &#39;kernel_info&#39;))
+            plt.savefig(os.path.join(OUTPUT_PATH, &#39;kernel_info.png&#39;) )
+            
+def load_from_json(filename:str) -&gt; dict:
+    &#34;&#34;&#34;Load parameters and board/kernel states from a .json file. Allows restoration of previous simulation states.
+
+    Args:
+        filename (str): The filename to load.
+
+    Returns:
+        dict: The state dictionary
+    &#34;&#34;&#34;
+    # Deserialization
+    print(&#34;Reading JSON file...&#34;)
+    with open(filename, &#34;r&#34;) as read_file:
+        d_load = json.load(read_file)
+
+        d_load[&#34;board&#34;] = np.asarray(d_load[&#34;board&#34;]) # Deserialise arrays
+        d_load[&#34;kernel&#34;] = np.asarray(d_load[&#34;kernel&#34;])
+
+        return d_load
+    
+def print_demos() -&gt; None:
+    &#34;&#34;&#34;Print the list of available demos as a nicely formatted list&#34;&#34;&#34;
+    print(&#39;Choose demos from:&#39;)
+    print(json.dumps(list(DEMOS.keys()), indent=4))
+    print(&#39;Usage: python Lenia.py --demo [DEMO]&#39;)
+    
+def simulation_from_file(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a simulation using the board state, kernel and parmaeters read from a .json file
+    Used for:
+     - runnning demos (most CLI arguments ignored) 
+     - running custom simuulations from pre-saved data. 
+
+    Args:
+        args (dict): Arguments from the CLI
+
+    &#34;&#34;&#34;
+    # Running a demo
+    if args[&#39;demo&#39;]:
+        demo = args[&#39;demo&#39;]
+        
+        # Preset demos for classic modalities with random ICs
+        if demo == &#39;conway&#39;:
+            demo_conway(args)
+            exit(0)
+            
+        if demo == &#39;smooth_life&#39;:
+            demo_smooth_life(args)
+            exit(0)
+            
+        if demo == &#39;lenia&#39;:
+            demo_lenia(args)
+            exit(0)
+            
+        # Load pre-saved species and required conditions 
+        if demo not in DEMOS.keys():
+            raise Exception(&#39;ERROR: {} not found in demos. Choose from {}&#39;.format(demo, DEMOS.keys()))
+    
+        print(&#39;Loading {}....&#39;.format(DEMOS[demo]))
+        d_load = load_from_json(DEMOS[demo])
+        d_load[&#39;board_size&#39;] = 0 # dummy var. Doesnt matter for loading as board is pre-loaded
+        
+        if args[&#39;outfile&#39;] == None: d_load[&#39;outfile&#39;] = &#39;{}.mp4&#39;.format(demo) # e.g. gyrorbium.mp4
+        else:  d_load[&#39;outfile&#39;] = args[&#39;outfile&#39;]
+        
+        if args[&#39;frames&#39;] == None: d_load[&#39;frames&#39;] = 200
+        else:  d_load[&#39;frames&#39;] = args[&#39;frames&#39;]
+        
+        run_simulation(d_load) # run the simulation
+        return(0)
+        
+    # Load presaved file (not demo)
+    else: 
+        print(&#39;Loading {}....&#39;.format(args[&#39;infile&#39;]))
+        d_load = load_from_json(args[&#39;infile&#39;])
+        d_load[&#39;board_size&#39;] = 0 # dummy var. Doesnt matter for loading as board is pre-loaded
+        
+        # Overwrite file params with cli params if provided
+        if args[&#39;outfile&#39;]: d_load[&#39;outfile&#39;] = args[&#39;outfile&#39;]
+        if args[&#39;dt&#39;]: d_load[&#39;dt&#39;] = args[&#39;dt&#39;]
+        if args[&#39;mu&#39;]: d_load[&#39;mu&#39;] = args[&#39;mu&#39;]
+        if args[&#39;sigma&#39;]: d_load[&#39;sigma&#39;] = args[&#39;sigma&#39;]
+        
+        if args[&#39;kernel_size&#39;]: d_load[&#39;kernel_size&#39;] = args[&#39;kernel_size&#39;]
+        if args[&#39;kernel_peaks&#39;]: d_load[&#39;kernel_peaks&#39;] = args[&#39;kernel_peaks&#39;]
+        
+        run_simulation(d_load) # run the simulation
+        return(0)
+    
+def demo_conway(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of Conway&#39;s Game of Life using the generalised Lenia framework.
+    The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.
+    This allows a variety of creatures to emerge under most conditions. 
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;bosco&#39; # boscos&#39;s rule for growth/shrinkage
+    args[&#39;kernel&#39;] = Kernel().square_kernel(3,1) # standard Moore neighbourhood
+    args[&#39;dt&#39;] = 1 # Discrete time steps
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 300 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;game_of_life.mp4&#39; 
+    
+    run_simulation(args) # run the simulation
+    return(0)
+
+def demo_smooth_life(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of SmoothLife using the generalised Lenia framework.
+    SmoothLife generalises Conway&#39;s game of life to a continuous domain (continous states, space and time).
+    For original paper see: https://arxiv.org/abs/1111.1567
+    
+    The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;bosco&#39;
+    args[&#39;b1&#39;] = 0.20
+    args[&#39;b2&#39;] = 0.25
+    args[&#39;s1&#39;] = 0.19
+    args[&#39;s2&#39;] = 0.33
+
+    args[&#39;kernel&#39;] = Kernel().square_kernel(3,1)
+    args[&#39;dt&#39;] = 0.1
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 300 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;smooth_life.mp4&#39; 
+    
+    run_simulation(args)
+    return(0)
+    
+def demo_lenia(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of Lenia.
+    Lenia further generalises Conway&#39;s game of life to a continuous domain (continous states, space and time, 
+    smooth kernel, smooth growth function).
+    For original paper see: https://arxiv.org/abs/1812.05433
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;gaussian&#39; # smooth growth function
+    args[&#39;mu&#39;] = 0.135
+    args[&#39;sigma&#39;] = 0.015
+
+    args[&#39;kernel&#39;] = Kernel().smooth_ring_kernel(16) # Guassian ring-like kernel
+    args[&#39;dt&#39;] = 0.1
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 100 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;lenia.mp4&#39; 
+    
+    run_simulation(args)
+    return(0)
+    
+def run_simulation(d_data:dict) -&gt; None:
+    &#34;&#34;&#34;Run and save a simulation using the generalised Lenia framework for a given set of parameters
+    Parameters may include:
+    - The initial values of the board
+        - or board size / seed to create a board
+    - The kernel 
+        or kernel peaks / kernel size to create a kernel
+    - The growth function type (Gaussian/Bosco) and corresponding parameters
+    - The value of dT
+    - The number of frames to simulate and output format
+
+    Args:
+        d_data (dict): The parameters 
+    &#34;&#34;&#34;
+    
+    # Kernel
+    kernel_size = 16
+    try:
+        if d_data[&#39;kernel_size&#39;] != None: kernel_size = int(d_data[&#39;kernel_size&#39;])
+    except: pass
+    
+    kernel_peaks = np.array([1])
+    try:
+        if d_data[&#39;kernel_peaks&#39;] != None: kernel_peaks = np.array([float(i) for i in d_data[&#39;kernel_peaks&#39;]])
+    except: pass
+        
+    kernel = Kernel().kernel_shell(kernel_size, peaks=kernel_peaks) # Create kernel
+    try: kernel = d_data[&#39;kernel&#39;] # use kernel provided (if exists)
+    except: pass  
+    
+    # Growth fn
+    growth_fn = Growth_fn()
+    
+    # If provided
+    try: growth_fn.b1 = d_data[&#39;b1&#39;]
+    except: pass
+    try: growth_fn.b2 = d_data[&#39;b2&#39;]
+    except: pass
+    try: growth_fn.s1 = d_data[&#39;s1&#39;]
+    except: pass
+    try: growth_fn.s2 = d_data[&#39;s2&#39;]
+    except: pass
+    try: growth_fn.type = d_data[&#39;type&#39;]
+    except: pass
+    
+    if d_data[&#39;mu&#39;] != None: growth_fn.mu = d_data[&#39;mu&#39;]
+    if d_data[&#39;sigma&#39;] != None: growth_fn.sigma = d_data[&#39;sigma&#39;]
+       
+    # Board  
+    board_size = 64
+    if d_data[&#39;board_size&#39;] != None: board_size = int(d_data[&#39;board_size&#39;])
+    
+    seed = None
+    try: seed = int(d_data[&#39;seed&#39;])
+    except: pass
+    
+    board = Board(board_size, seed=seed) # Create board
+    try: 
+        if type(d_data[&#39;board&#39;]) != None: 
+            board.board = d_data[&#39;board&#39;] # if provided
+    except: pass
+
+    # General simulation params
+    frames = 100
+    try: frames = int(d_data[&#39;frames&#39;])
+    except: pass
+    
+    dt = 0.1 # timestep
+    if d_data[&#39;dt&#39;] != None: dt = float(d_data[&#39;dt&#39;])
+    
+    # Run the simulation and animate
+    print(&#39;Running simulation... &#39;)
+    game_of_life = Automaton(board, kernel, growth_fn, dT=dt)
+    game_of_life.animate(frames)
+    print(&#39;Simulation complete!&#39;)
+
+    outfile = &#39;output.mp4&#39;
+    try: 
+        if d_data[&#39;outfile&#39;] != None: 
+            outfile = d_data[&#39;outfile&#39;]
+    except: pass
+    print(&#39;Saving simulation as ./outputs/{}... (may take several minutes)&#39;.format(outfile))
+    game_of_life.save_animation(outfile)
+    print(&#39;Saving complete!&#39;)
+    
+    # Save to json
+    try: 
+        if d_data[&#39;json&#39;] != None: 
+            print(&#39;Saving results as ./datafiles/{}... &#39;.format(d_data[&#39;json&#39;]))
+            game_of_life.save_json(d_data[&#39;json&#39;])
+    except: pass
+    
+    # Save a figure showing the kernel and growth funcion 
+    try:
+        if d_data[&#39;verbose&#39;] == True:
+            
+            game_of_life.plot_kernel_info(save=True)
+            
+            print(&#39;Saving final board state as ./outputs/board.png&#39;)
+            plt.figure()
+            plt.imshow(game_of_life.board)
+            plt.savefig(&#39;./outputs/board.png&#39;)
+    except: pass
+    
+    print(&#39;Complete! :)&#39;) # END
+    return(0)
+    
+def validate_args(args:dict) -&gt; dict:
+    &#34;&#34;&#34;Check the arguments provided by the user are valid. Return arguments as correct type.
+
+    Args:
+        args (dict): CLI args from user
+
+    Returns:
+        dict: Cleaned and checked args
+    &#34;&#34;&#34;
+    
+    # Convert numeric args to floats
+    for arg in NUMERIC_ARGS:
+        
+        if args[arg] != None:
+            try:
+                args[arg] = float(args[arg])
+            except ValueError:
+                print(&#39;ERROR: --{} must be a numeric value&#39;.format(arg.replace(&#39;_&#39;,&#39;-&#39;)))
+                return(-1)
+            if args[arg] &lt; 0:
+                print(&#39;ERROR: --{} must be greater then zero&#39;.format(arg.replace(&#39;_&#39;,&#39;-&#39;)))
+                return(-1)
+    
+    # Check the kernel peaks are all numeric
+    if args[&#39;kernel_peaks&#39;] != None:
+        try:
+            args[&#39;kernel_peaks&#39;] = [float(i) for i in args[&#39;kernel_peaks&#39;]]
+        except ValueError:
+            print(&#39;ERROR: --kernel-peaks must be a numeric&#39;)
+            return(-1)
+        for i in args[&#39;kernel_peaks&#39;]:
+            if i &lt; 0 or i &gt; 1:
+                print(&#39;ERROR: --kernel-peaks must be between 0 and 1&#39;)
+                return(-1)
+ 
+    return args
+        
+def handle_args(args:dict) -&gt; None:
+    &#34;&#34;&#34;The main execution sequence. Run siumlations and exit.
+
+    Args:
+        args (dict): CLI arguments from user
+    &#34;&#34;&#34;
+    print_welcome() # Welcome message
+    
+    args = validate_args(args) # Clean args
+    if args == -1:
+        exit(-1)
+        
+    elif args[&#39;list_demos&#39;]: # List the available demos
+        print_demos()
+        exit(0)
+        
+    elif args[&#39;demo&#39;]: # Run a demo
+        simulation_from_file(args)
+        exit(0)
+        
+    elif args[&#39;conway&#39;]: # Run conway demo
+        demo_conway(args)
+        exit(0)
+        
+    elif args[&#39;smooth_life&#39;]: # Run smoothlife demo
+        demo_smooth_life(args)
+        exit(0)
+        
+    elif args[&#39;lenia&#39;]: # Run lenia demo
+        demo_lenia(args)
+        exit(0)
+        
+    elif args[&#39;infile&#39;]: # Run simulation from file
+        simulation_from_file(args)
+        exit(0)
+    
+    else: # Run simulation as defined by cli args
+        run_simulation(args)
+        exit(0)
+        
+def print_welcome() -&gt; None:
+    &#34;&#34;&#34;Print a welcome message&#34;&#34;&#34;
+    
+    print(&#39;&#39;&#39;
+-------------------------------------------------------------------------------------------
+  _                _          _____ _____ _______ 
+ | |              (_)        / ____|  __ \__   __|
+ | |     ___ _ __  _  __ _  | (___ | |  | | | |   
+ | |    / _ \ &#39;_ \| |/ _` |  \___ \| |  | | | |   
+ | |___|  __/ | | | | (_| |  ____) | |__| | | |   
+ |______\___|_| |_|_|\__,_| |_____/|_____/  |_|  
+ 
+ Welcome to the Lenia Species Discovery Tool.
+ Developed by Lewis Howell for COMP5400M Bio-Inspired Computing - Assessment 2 :)
+ See https://arxiv.org/abs/1812.05433 for the original 2018 paper from the creators of Lenia
+ 
+ For help use python Lenia.py -h
+ -------------------------------------------------------------------------------------------
+ Demos: 
+ python3 Lenia.py --list-demos
+ python3 Lenia.py --demo [DEMO]
+
+ Evolve new species: 
+    python3 Lenia.py -b 16 -k 16 -t 0.1 -m 0.135 -s 0.015 -x 10 -n 200
+
+ or change conditions to see how species change:
+    python3 Lenia.py -i ./datafiles/double_orbium.json -o destroyed_orbium.gif -m 0.11
+-------------------------------------------------------------------------------------------
+          &#39;&#39;&#39;)
+    
+if __name__ == &#39;__main__&#39;:
+    
+    # Agrument handling
+    parser = argparse.ArgumentParser(description=&#34;Lenia cellular automata - developed by Lewis Howell for COMP5400M Bio-Inspired Computing - Assessment 2&#34;,
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    
+    parser.add_argument(&#34;--conway&#34;, action=&#34;store_true&#34;, help=&#34;Demo Conway&#39;s game of Life with random ICs&#34;)
+    parser.add_argument(&#34;--smooth-life&#34;, action=&#34;store_true&#34;, help=&#34;Demo SmoothLife with random ICs&#34;)
+    parser.add_argument(&#34;--lenia&#34;, action=&#34;store_true&#34;, help=&#34;Demo Lenia with random ICs&#34;)
+    parser.add_argument(&#34;--demo&#34;, help=&#34;simulate a pre-saved demo. To list the options use --list-demos&#34;, 
+                        nargs=&#39;?&#39;, const=&#39;demo&#39;, type=str)
+    parser.add_argument(&#34;--list-demos&#34;, action=&#34;store_true&#34;, help=&#34;Show the demo options and exit&#34;)
+    parser.add_argument(&#34;-v&#34;, &#34;--verbose&#34;, action=&#34;store_true&#34;, help=&#34;Verbose&#34;)
+    
+    #strings
+    parser.add_argument(&#34;-c&#34;, &#34;--config&#34;, help=&#34;path to config file&#34;)
+    parser.add_argument(&#34;-i&#34;, &#34;--infile&#34;, help=&#34;path to source file (.json) if using pre-saved data&#34;)
+    parser.add_argument(&#34;-o&#34;, &#34;--outfile&#34;, help=&#34;path to destination file (.gif or .mp4)&#34;)
+    parser.add_argument(&#34;-j&#34;, &#34;--json&#34;, help=&#34;path to store results .json&#34;)
+    
+    # numeric
+    parser.add_argument(&#34;-b&#34;, &#34;--board-size&#34;, help=&#34;board size&#34;)
+    parser.add_argument(&#34;-k&#34;, &#34;--kernel-size&#34;, help=&#34;kernel size&#34;)
+    parser.add_argument(&#34;-p&#34;, &#34;--kernel-peaks&#34;, nargs=&#39;+&#39;, help=&#34;kernel peaks&#34;) # list
+    parser.add_argument(&#34;-m&#34;, &#34;--mu&#34;, help=&#34;gaussian mean for kernel (mu)&#34;)
+    parser.add_argument(&#34;-s&#34;, &#34;--sigma&#34;, help=&#34;gaussian stdev for kernel (sigma)&#34;)
+    parser.add_argument(&#34;-t&#34;, &#34;--dt&#34;, help=&#34;timestep (0-1)&#34;)
+    parser.add_argument(&#34;-n&#34;, &#34;--frames&#34;, help=&#34;number of frames to simulate&#34;)
+    parser.add_argument(&#34;-x&#34;, &#34;--seed&#34;, help=&#34;the seed for random number generation&#34;)
+    
+    args = parser.parse_args()
+    config = vars(args)
+    
+    handle_args(config) # Run main sequence</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="lenia_lh.demo_conway"><code class="name flex">
+<span>def <span class="ident">demo_conway</span></span>(<span>args: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run a demo simulation of Conway's Game of Life using the generalised Lenia framework.
+The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.
+This allows a variety of creatures to emerge under most conditions. </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Arguments from the CLI</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def demo_conway(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of Conway&#39;s Game of Life using the generalised Lenia framework.
+    The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.
+    This allows a variety of creatures to emerge under most conditions. 
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;bosco&#39; # boscos&#39;s rule for growth/shrinkage
+    args[&#39;kernel&#39;] = Kernel().square_kernel(3,1) # standard Moore neighbourhood
+    args[&#39;dt&#39;] = 1 # Discrete time steps
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 300 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;game_of_life.mp4&#39; 
+    
+    run_simulation(args) # run the simulation
+    return(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.demo_lenia"><code class="name flex">
+<span>def <span class="ident">demo_lenia</span></span>(<span>args: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run a demo simulation of Lenia.
+Lenia further generalises Conway's game of life to a continuous domain (continous states, space and time,
+smooth kernel, smooth growth function).
+For original paper see: <a href="https://arxiv.org/abs/1812.05433">https://arxiv.org/abs/1812.05433</a></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Arguments from the CLI</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def demo_lenia(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of Lenia.
+    Lenia further generalises Conway&#39;s game of life to a continuous domain (continous states, space and time, 
+    smooth kernel, smooth growth function).
+    For original paper see: https://arxiv.org/abs/1812.05433
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;gaussian&#39; # smooth growth function
+    args[&#39;mu&#39;] = 0.135
+    args[&#39;sigma&#39;] = 0.015
+
+    args[&#39;kernel&#39;] = Kernel().smooth_ring_kernel(16) # Guassian ring-like kernel
+    args[&#39;dt&#39;] = 0.1
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 100 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;lenia.mp4&#39; 
+    
+    run_simulation(args)
+    return(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.demo_smooth_life"><code class="name flex">
+<span>def <span class="ident">demo_smooth_life</span></span>(<span>args: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run a demo simulation of SmoothLife using the generalised Lenia framework.
+SmoothLife generalises Conway's game of life to a continuous domain (continous states, space and time).
+For original paper see: <a href="https://arxiv.org/abs/1111.1567">https://arxiv.org/abs/1111.1567</a></p>
+<p>The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Arguments from the CLI</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def demo_smooth_life(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a demo simulation of SmoothLife using the generalised Lenia framework.
+    SmoothLife generalises Conway&#39;s game of life to a continuous domain (continous states, space and time).
+    For original paper see: https://arxiv.org/abs/1111.1567
+    
+    The board is initialised as a sparse random 64x64 matrix with zero padding of size 32.
+
+    Args:
+        args (dict): Arguments from the CLI
+    &#34;&#34;&#34;
+    
+    args[&#39;type&#39;] = &#39;bosco&#39;
+    args[&#39;b1&#39;] = 0.20
+    args[&#39;b2&#39;] = 0.25
+    args[&#39;s1&#39;] = 0.19
+    args[&#39;s2&#39;] = 0.33
+
+    args[&#39;kernel&#39;] = Kernel().square_kernel(3,1)
+    args[&#39;dt&#39;] = 0.1
+    
+    if args[&#39;frames&#39;] == None: args[&#39;frames&#39;] = 300 
+    if args[&#39;board_size&#39;] == None: args[&#39;board_size&#39;] = 64 
+    if args[&#39;outfile&#39;] == None: args[&#39;outfile&#39;] = &#39;smooth_life.mp4&#39; 
+    
+    run_simulation(args)
+    return(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.handle_args"><code class="name flex">
+<span>def <span class="ident">handle_args</span></span>(<span>args: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The main execution sequence. Run siumlations and exit.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>CLI arguments from user</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handle_args(args:dict) -&gt; None:
+    &#34;&#34;&#34;The main execution sequence. Run siumlations and exit.
+
+    Args:
+        args (dict): CLI arguments from user
+    &#34;&#34;&#34;
+    print_welcome() # Welcome message
+    
+    args = validate_args(args) # Clean args
+    if args == -1:
+        exit(-1)
+        
+    elif args[&#39;list_demos&#39;]: # List the available demos
+        print_demos()
+        exit(0)
+        
+    elif args[&#39;demo&#39;]: # Run a demo
+        simulation_from_file(args)
+        exit(0)
+        
+    elif args[&#39;conway&#39;]: # Run conway demo
+        demo_conway(args)
+        exit(0)
+        
+    elif args[&#39;smooth_life&#39;]: # Run smoothlife demo
+        demo_smooth_life(args)
+        exit(0)
+        
+    elif args[&#39;lenia&#39;]: # Run lenia demo
+        demo_lenia(args)
+        exit(0)
+        
+    elif args[&#39;infile&#39;]: # Run simulation from file
+        simulation_from_file(args)
+        exit(0)
+    
+    else: # Run simulation as defined by cli args
+        run_simulation(args)
+        exit(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.load_from_json"><code class="name flex">
+<span>def <span class="ident">load_from_json</span></span>(<span>filename: str) ‑> dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load parameters and board/kernel states from a .json file. Allows restoration of previous simulation states.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>The filename to load.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>The state dictionary</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_from_json(filename:str) -&gt; dict:
+    &#34;&#34;&#34;Load parameters and board/kernel states from a .json file. Allows restoration of previous simulation states.
+
+    Args:
+        filename (str): The filename to load.
+
+    Returns:
+        dict: The state dictionary
+    &#34;&#34;&#34;
+    # Deserialization
+    print(&#34;Reading JSON file...&#34;)
+    with open(filename, &#34;r&#34;) as read_file:
+        d_load = json.load(read_file)
+
+        d_load[&#34;board&#34;] = np.asarray(d_load[&#34;board&#34;]) # Deserialise arrays
+        d_load[&#34;kernel&#34;] = np.asarray(d_load[&#34;kernel&#34;])
+
+        return d_load</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.print_demos"><code class="name flex">
+<span>def <span class="ident">print_demos</span></span>(<span>) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Print the list of available demos as a nicely formatted list</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_demos() -&gt; None:
+    &#34;&#34;&#34;Print the list of available demos as a nicely formatted list&#34;&#34;&#34;
+    print(&#39;Choose demos from:&#39;)
+    print(json.dumps(list(DEMOS.keys()), indent=4))
+    print(&#39;Usage: python Lenia.py --demo [DEMO]&#39;)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.print_welcome"><code class="name flex">
+<span>def <span class="ident">print_welcome</span></span>(<span>) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Print a welcome message</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def print_welcome() -&gt; None:
+    &#34;&#34;&#34;Print a welcome message&#34;&#34;&#34;
+    
+    print(&#39;&#39;&#39;
+-------------------------------------------------------------------------------------------
+  _                _          _____ _____ _______ 
+ | |              (_)        / ____|  __ \__   __|
+ | |     ___ _ __  _  __ _  | (___ | |  | | | |   
+ | |    / _ \ &#39;_ \| |/ _` |  \___ \| |  | | | |   
+ | |___|  __/ | | | | (_| |  ____) | |__| | | |   
+ |______\___|_| |_|_|\__,_| |_____/|_____/  |_|  
+ 
+ Welcome to the Lenia Species Discovery Tool.
+ Developed by Lewis Howell for COMP5400M Bio-Inspired Computing - Assessment 2 :)
+ See https://arxiv.org/abs/1812.05433 for the original 2018 paper from the creators of Lenia
+ 
+ For help use python Lenia.py -h
+ -------------------------------------------------------------------------------------------
+ Demos: 
+ python3 Lenia.py --list-demos
+ python3 Lenia.py --demo [DEMO]
+
+ Evolve new species: 
+    python3 Lenia.py -b 16 -k 16 -t 0.1 -m 0.135 -s 0.015 -x 10 -n 200
+
+ or change conditions to see how species change:
+    python3 Lenia.py -i ./datafiles/double_orbium.json -o destroyed_orbium.gif -m 0.11
+-------------------------------------------------------------------------------------------
+          &#39;&#39;&#39;)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.run_simulation"><code class="name flex">
+<span>def <span class="ident">run_simulation</span></span>(<span>d_data: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run and save a simulation using the generalised Lenia framework for a given set of parameters
+Parameters may include:
+- The initial values of the board
+- or board size / seed to create a board
+- The kernel
+or kernel peaks / kernel size to create a kernel
+- The growth function type (Gaussian/Bosco) and corresponding parameters
+- The value of dT
+- The number of frames to simulate and output format</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>d_data</code></strong> :&ensp;<code>dict</code></dt>
+<dd>The parameters</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run_simulation(d_data:dict) -&gt; None:
+    &#34;&#34;&#34;Run and save a simulation using the generalised Lenia framework for a given set of parameters
+    Parameters may include:
+    - The initial values of the board
+        - or board size / seed to create a board
+    - The kernel 
+        or kernel peaks / kernel size to create a kernel
+    - The growth function type (Gaussian/Bosco) and corresponding parameters
+    - The value of dT
+    - The number of frames to simulate and output format
+
+    Args:
+        d_data (dict): The parameters 
+    &#34;&#34;&#34;
+    
+    # Kernel
+    kernel_size = 16
+    try:
+        if d_data[&#39;kernel_size&#39;] != None: kernel_size = int(d_data[&#39;kernel_size&#39;])
+    except: pass
+    
+    kernel_peaks = np.array([1])
+    try:
+        if d_data[&#39;kernel_peaks&#39;] != None: kernel_peaks = np.array([float(i) for i in d_data[&#39;kernel_peaks&#39;]])
+    except: pass
+        
+    kernel = Kernel().kernel_shell(kernel_size, peaks=kernel_peaks) # Create kernel
+    try: kernel = d_data[&#39;kernel&#39;] # use kernel provided (if exists)
+    except: pass  
+    
+    # Growth fn
+    growth_fn = Growth_fn()
+    
+    # If provided
+    try: growth_fn.b1 = d_data[&#39;b1&#39;]
+    except: pass
+    try: growth_fn.b2 = d_data[&#39;b2&#39;]
+    except: pass
+    try: growth_fn.s1 = d_data[&#39;s1&#39;]
+    except: pass
+    try: growth_fn.s2 = d_data[&#39;s2&#39;]
+    except: pass
+    try: growth_fn.type = d_data[&#39;type&#39;]
+    except: pass
+    
+    if d_data[&#39;mu&#39;] != None: growth_fn.mu = d_data[&#39;mu&#39;]
+    if d_data[&#39;sigma&#39;] != None: growth_fn.sigma = d_data[&#39;sigma&#39;]
+       
+    # Board  
+    board_size = 64
+    if d_data[&#39;board_size&#39;] != None: board_size = int(d_data[&#39;board_size&#39;])
+    
+    seed = None
+    try: seed = int(d_data[&#39;seed&#39;])
+    except: pass
+    
+    board = Board(board_size, seed=seed) # Create board
+    try: 
+        if type(d_data[&#39;board&#39;]) != None: 
+            board.board = d_data[&#39;board&#39;] # if provided
+    except: pass
+
+    # General simulation params
+    frames = 100
+    try: frames = int(d_data[&#39;frames&#39;])
+    except: pass
+    
+    dt = 0.1 # timestep
+    if d_data[&#39;dt&#39;] != None: dt = float(d_data[&#39;dt&#39;])
+    
+    # Run the simulation and animate
+    print(&#39;Running simulation... &#39;)
+    game_of_life = Automaton(board, kernel, growth_fn, dT=dt)
+    game_of_life.animate(frames)
+    print(&#39;Simulation complete!&#39;)
+
+    outfile = &#39;output.mp4&#39;
+    try: 
+        if d_data[&#39;outfile&#39;] != None: 
+            outfile = d_data[&#39;outfile&#39;]
+    except: pass
+    print(&#39;Saving simulation as ./outputs/{}... (may take several minutes)&#39;.format(outfile))
+    game_of_life.save_animation(outfile)
+    print(&#39;Saving complete!&#39;)
+    
+    # Save to json
+    try: 
+        if d_data[&#39;json&#39;] != None: 
+            print(&#39;Saving results as ./datafiles/{}... &#39;.format(d_data[&#39;json&#39;]))
+            game_of_life.save_json(d_data[&#39;json&#39;])
+    except: pass
+    
+    # Save a figure showing the kernel and growth funcion 
+    try:
+        if d_data[&#39;verbose&#39;] == True:
+            
+            game_of_life.plot_kernel_info(save=True)
+            
+            print(&#39;Saving final board state as ./outputs/board.png&#39;)
+            plt.figure()
+            plt.imshow(game_of_life.board)
+            plt.savefig(&#39;./outputs/board.png&#39;)
+    except: pass
+    
+    print(&#39;Complete! :)&#39;) # END
+    return(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.simulation_from_file"><code class="name flex">
+<span>def <span class="ident">simulation_from_file</span></span>(<span>args: dict) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Run a simulation using the board state, kernel and parmaeters read from a .json file
+Used for:
+- runnning demos (most CLI arguments ignored)
+- running custom simuulations from pre-saved data. </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>Arguments from the CLI</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def simulation_from_file(args:dict) -&gt; None:
+    &#34;&#34;&#34;Run a simulation using the board state, kernel and parmaeters read from a .json file
+    Used for:
+     - runnning demos (most CLI arguments ignored) 
+     - running custom simuulations from pre-saved data. 
+
+    Args:
+        args (dict): Arguments from the CLI
+
+    &#34;&#34;&#34;
+    # Running a demo
+    if args[&#39;demo&#39;]:
+        demo = args[&#39;demo&#39;]
+        
+        # Preset demos for classic modalities with random ICs
+        if demo == &#39;conway&#39;:
+            demo_conway(args)
+            exit(0)
+            
+        if demo == &#39;smooth_life&#39;:
+            demo_smooth_life(args)
+            exit(0)
+            
+        if demo == &#39;lenia&#39;:
+            demo_lenia(args)
+            exit(0)
+            
+        # Load pre-saved species and required conditions 
+        if demo not in DEMOS.keys():
+            raise Exception(&#39;ERROR: {} not found in demos. Choose from {}&#39;.format(demo, DEMOS.keys()))
+    
+        print(&#39;Loading {}....&#39;.format(DEMOS[demo]))
+        d_load = load_from_json(DEMOS[demo])
+        d_load[&#39;board_size&#39;] = 0 # dummy var. Doesnt matter for loading as board is pre-loaded
+        
+        if args[&#39;outfile&#39;] == None: d_load[&#39;outfile&#39;] = &#39;{}.mp4&#39;.format(demo) # e.g. gyrorbium.mp4
+        else:  d_load[&#39;outfile&#39;] = args[&#39;outfile&#39;]
+        
+        if args[&#39;frames&#39;] == None: d_load[&#39;frames&#39;] = 200
+        else:  d_load[&#39;frames&#39;] = args[&#39;frames&#39;]
+        
+        run_simulation(d_load) # run the simulation
+        return(0)
+        
+    # Load presaved file (not demo)
+    else: 
+        print(&#39;Loading {}....&#39;.format(args[&#39;infile&#39;]))
+        d_load = load_from_json(args[&#39;infile&#39;])
+        d_load[&#39;board_size&#39;] = 0 # dummy var. Doesnt matter for loading as board is pre-loaded
+        
+        # Overwrite file params with cli params if provided
+        if args[&#39;outfile&#39;]: d_load[&#39;outfile&#39;] = args[&#39;outfile&#39;]
+        if args[&#39;dt&#39;]: d_load[&#39;dt&#39;] = args[&#39;dt&#39;]
+        if args[&#39;mu&#39;]: d_load[&#39;mu&#39;] = args[&#39;mu&#39;]
+        if args[&#39;sigma&#39;]: d_load[&#39;sigma&#39;] = args[&#39;sigma&#39;]
+        
+        if args[&#39;kernel_size&#39;]: d_load[&#39;kernel_size&#39;] = args[&#39;kernel_size&#39;]
+        if args[&#39;kernel_peaks&#39;]: d_load[&#39;kernel_peaks&#39;] = args[&#39;kernel_peaks&#39;]
+        
+        run_simulation(d_load) # run the simulation
+        return(0)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.validate_args"><code class="name flex">
+<span>def <span class="ident">validate_args</span></span>(<span>args: dict) ‑> dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Check the arguments provided by the user are valid. Return arguments as correct type.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>args</code></strong> :&ensp;<code>dict</code></dt>
+<dd>CLI args from user</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>Cleaned and checked args</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate_args(args:dict) -&gt; dict:
+    &#34;&#34;&#34;Check the arguments provided by the user are valid. Return arguments as correct type.
+
+    Args:
+        args (dict): CLI args from user
+
+    Returns:
+        dict: Cleaned and checked args
+    &#34;&#34;&#34;
+    
+    # Convert numeric args to floats
+    for arg in NUMERIC_ARGS:
+        
+        if args[arg] != None:
+            try:
+                args[arg] = float(args[arg])
+            except ValueError:
+                print(&#39;ERROR: --{} must be a numeric value&#39;.format(arg.replace(&#39;_&#39;,&#39;-&#39;)))
+                return(-1)
+            if args[arg] &lt; 0:
+                print(&#39;ERROR: --{} must be greater then zero&#39;.format(arg.replace(&#39;_&#39;,&#39;-&#39;)))
+                return(-1)
+    
+    # Check the kernel peaks are all numeric
+    if args[&#39;kernel_peaks&#39;] != None:
+        try:
+            args[&#39;kernel_peaks&#39;] = [float(i) for i in args[&#39;kernel_peaks&#39;]]
+        except ValueError:
+            print(&#39;ERROR: --kernel-peaks must be a numeric&#39;)
+            return(-1)
+        for i in args[&#39;kernel_peaks&#39;]:
+            if i &lt; 0 or i &gt; 1:
+                print(&#39;ERROR: --kernel-peaks must be between 0 and 1&#39;)
+                return(-1)
+ 
+    return args</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="lenia_lh.Automaton"><code class="flex name class">
+<span>class <span class="ident">Automaton</span></span>
+<span>(</span><span>board: object, kernel: object, growth_fn: object, dT: float = 0.1, cmap: str = 'viridis')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for running, animating, loading and saving cellular automata.
+Used in all siumlations for Lenia and Conways's game of life.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>board</code></strong> :&ensp;<code>object</code></dt>
+<dd>Instance of Board(). Stores current state of the field</dd>
+<dt><strong><code>kernel</code></strong> :&ensp;<code>object</code></dt>
+<dd>Instance of Kernel(). The kernel used to calculate the neighbourhood sum</dd>
+<dt><strong><code>growth_fn</code></strong> :&ensp;<code>object</code></dt>
+<dd>Instance of Growth_fn(). The growth function used to compute the update on the neighbourhood sum</dd>
+<dt><strong><code>dT</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The timestep used. As dT tends to zero, time approaches continuum. Defaults to 0.1.</dd>
+<dt><strong><code>cmap</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The colourmap used for plotting. Defaults to 'viridis'.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Automaton(Growth_fn):
+    &#34;&#34;&#34;Class for running, animating, loading and saving cellular automata.
+    Used in all siumlations for Lenia and Conways&#39;s game of life.
+
+    &#34;&#34;&#34;
+    def __init__(self, 
+                 board:object, 
+                 kernel:object, 
+                 growth_fn:object, 
+                 dT:float=0.1, 
+                 cmap:str=&#39;viridis&#39;
+                 ):
+        &#34;&#34;&#34;
+        Args:
+            board (object): Instance of Board(). Stores current state of the field
+            kernel (object): Instance of Kernel(). The kernel used to calculate the neighbourhood sum
+            growth_fn (object): Instance of Growth_fn(). The growth function used to compute the update on the neighbourhood sum
+            dT (float, optional): The timestep used. As dT tends to zero, time approaches continuum. Defaults to 0.1.
+            cmap (str, optional): The colourmap used for plotting. Defaults to &#39;viridis&#39;.
+        &#34;&#34;&#34;
+        
+        # Local parameters 
+        self.cmap = cmap
+        self.dT = dT
+        
+        # Kernel paramaters
+        self.kernel = kernel 
+        self.normalise_kernel() # Normalise the kernel 
+        
+        # Growth function parameters
+        self.b1 = growth_fn.b1
+        self.b2 = growth_fn.b2
+        self.s1 = growth_fn.s1
+        self.s2 = growth_fn.s2
+        self.mu = growth_fn.mu
+        self.sigma = growth_fn.sigma
+        self.type = growth_fn.type
+        if self.type == &#39;gaussian&#39;:
+            self.growth = self.growth_gaussian
+        elif self.type == &#39;bosco&#39;:
+            self.growth = self.growth_bosco
+        
+        # The board state
+        self.board = board.board
+        self.board_shape = self.board.shape
+        self.fig, self.img = self.show_board() # Frames of animation
+        
+        self.anim = None # Store the animation
+    
+    def normalise_kernel(self) -&gt; np.array:
+        &#34;&#34;&#34;Normalise the kernel such the values sum to 1. 
+        This makes generalisations much easier and ensures that the range of the neighbourhood sums is independent 
+        of the kernel used. 
+        Ensures the values of the growth function are robust to rescaling of the board/kernel. 
+
+        Returns:
+            np.array: The resulting normlised kernel
+        &#34;&#34;&#34;
+        kernel_norm = self.kernel / (1*np.sum(self.kernel))
+        self.norm_factor = 1/ (1*np.sum(self.kernel))
+        self.kernel = kernel_norm 
+        return kernel_norm
+      
+    def show_board(self, 
+                   display:bool=False,
+                   ):
+        &#34;&#34;&#34;Create figure to display the board. 
+        Used to animate each frame during the simulation.
+
+        Args:
+            display (bool, optional): Show the figure
+
+        Returns:
+            tuple(plt.figure, plt.imshow): Figure and axes items for the board at timestate t.
+        &#34;&#34;&#34;
+        dpi = 50 # Using a higher dpi will result in higher quality graphics but will significantly affect computation
+
+        self.fig = plt.figure(figsize=(10*np.shape(self.board)[1]/dpi, 10*np.shape(self.board)[0]/dpi), dpi=dpi)
+
+        ax = self.fig.add_axes([0, 0, 1, 1])
+        ax.axis(&#39;off&#39;)
+        
+        self.img = ax.imshow(self.board, cmap=self.cmap, interpolation=&#39;none&#39;, aspect=1, vmin=0) #  vmax=vmax
+        
+        if display:
+            plt.show()
+        else: # Do not show intermediate figures when creating animations (very slow)
+            plt.close()
+
+        return self.fig, self.img
+
+    def update_rule_default(self, 
+                            neighbours:np.array
+                            ) -&gt; np.array:
+        &#34;&#34;&#34;Update the board using the classic rules from Conway&#39;s game of life:
+        
+        https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+        Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+        Any live cell with two or three live neighbours lives on to the next generation.
+        Any live cell with more than three live neighbours dies, as if by overpopulation.
+        Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+        Args:
+            neighbours (np.array): The neighbourhood sums U(x,y)
+
+        Returns:
+            np.array: The updated board f(x,y,t+1) at time t+1 
+        &#34;&#34;&#34;
+        r1 = (neighbours == 3) # 3 neighbours -&gt; lives
+        r2 = np.logical_and(self.board, (neighbours == 2)) # 2 neighbours and alive -&gt; lives
+        r3 = np.logical_or(r1,r2).astype(int) # all other -&gt; dead
+        return r3
+    
+    def update_convolutional(self) -&gt; np.array:
+        &#34;&#34;&#34;Update the board state using the convolution method to calculate the neighbourhood sum
+        
+        f(x,y,t+1) = g(k*f(x,y,t))
+        
+        where         
+        f(x,y,t) is the state at time t
+        k is the kernel (e.g. Extended Moore neighbourhood)
+        g is the growth function
+        n.b. the operator &#39;*&#39; represents the convolution operator
+        
+        Returns:
+            np.array: The updated board f(x,y,t+1)
+        &#34;&#34;&#34;
+        
+        # Calculate the neighbourhood sum by convolution with the kernel.
+        # Use periodic boundary conditions to &#39;wrap&#39; the grid in the x and y dimensions
+        neighbours = scipy.signal.convolve2d(self.board, self.kernel, mode=&#39;same&#39;, boundary=&#39;wrap&#39;)
+        
+        # Update the board as per the growth function and timestep dT, clipping values to the range 0..1
+        self.board = np.clip(self.board + self.dT * self.growth(neighbours), 0, 1)
+        
+        return self.board
+        
+    
+    def animate_step(self, i:int) -&gt; plt.imshow:
+        &#34;&#34;&#34;Update the board and perform a single timestep of animation.
+        Used by &#39;animate&#39; to update and render the board after each iteration, returns the relevent frame. 
+
+        Args:
+            i (int): Dummy variable for animation. Represents the frame number
+
+        Returns:
+            plt.axes.imshow: The rendered image of the board at the next timestep
+        &#34;&#34;&#34;
+        
+        self.update_convolutional() # update the board
+        self.img.set_array(self.board) # render the updated state 
+        return self.img,
+    
+    def animate(self, 
+                frames:int, 
+                interval:float=50, 
+                blit=True,
+                ):
+        &#34;&#34;&#34;The main input point for creating a cellular automata animation. 
+        Simulates and renders the cellular automata as a matplotlib.animation.FuncAnimation.
+        This can then be saved using ffmpeg.
+
+        Args:
+            frames (int): The number of frames/timesteps to simulate.
+            interval (float, optional): The time between frames in milliseconds. Defaults to 50.
+            blit (bool, optional): Whether to use blitting to render the images. This improves the performace
+                    by reducing the amount of unnecessary pixel updates. Defaults to False.
+                    https://matplotlib.org/3.5.0/tutorials/advanced/blitting.html
+        &#34;&#34;&#34;
+        # Animate Lenia
+        self.anim = matplotlib.animation.FuncAnimation(self.fig, self.animate_step, 
+                                                frames=frames, interval=interval, save_count=MAX_FRAMES, blit=blit)
+        
+    def save_animation(self, 
+                       filename:str,
+                       ):
+        &#34;&#34;&#34;Save a matplotlib.animation.FuncAnimation using ffmpeg/PIL.
+        
+        Saves in ./outputs by default
+        Supported file types:
+         - .mp4
+         - .gif
+         
+        The file type is inferred from the filename extension
+
+        Args:
+            filename (str): The filename (with extension) to save
+
+        &#34;&#34;&#34;
+        if not self.anim:
+            raise Exception(&#39;ERROR: Run animation before attempting to save&#39;)
+            return 
+        
+        fmt = os.path.splitext(filename)[1] # isolate the file extension
+        
+        try: # make outputs folder if not already exists
+            os.makedirs(OUTPUT_PATH)
+        except FileExistsError:
+            # directory already exists
+            pass
+
+        if fmt == &#39;.gif&#39;:
+            f = os.path.join(OUTPUT_PATH, filename) 
+            writer = matplotlib.animation.PillowWriter(fps=30) 
+            self.anim.save(f, writer=writer)
+        elif fmt == &#39;.mp4&#39;:
+            f = os.path.join(OUTPUT_PATH, filename) 
+            writer = matplotlib.animation.FFMpegWriter(fps=30) 
+            self.anim.save(f, writer=writer)
+        else:
+            raise Exception(&#39;ERROR: Unknown save format. Must be .gif or .mp4&#39;)
+
+    def save_json(self, 
+                  filename:str,
+                  ) -&gt; dict:
+        &#34;&#34;&#34;Create a state dictionary which holds the current values of the board, kernel, growth function parameters
+        and native parameters. Save as a .json file 
+        
+        Allows restoration of a board state at a later time. Used to store species/interesting results.
+        Files are stored in ./datafiles by default.
+        
+        Args:
+            filename (str): The filename (including extension). 
+
+        Returns:
+            dict: The state dict used to create the .json file. 
+        &#34;&#34;&#34;
+        
+        fmt = os.path.splitext(filename)[1]
+        
+        try: # make outputs folder if not already exists
+            os.makedirs(DATA_PATH)
+        except FileExistsError: # directory already exists
+            pass
+        
+        if not fmt == &#39;.json&#39;:
+            raise Exception(&#39;ERROR: Must save as .json&#39;)
+            
+        d_save = {}
+
+        d_save[&#39;dt&#39;] = self.dT
+        d_save[&#39;cmap&#39;] = self.cmap
+
+        d_save[&#39;type&#39;] = self.type
+        d_save[&#39;s1&#39;] = self.s1
+        d_save[&#39;s2&#39;] = self.s2
+        d_save[&#39;b1&#39;] = self.b1
+        d_save[&#39;b2&#39;] = self.b2
+        d_save[&#39;mu&#39;] = self.mu
+        d_save[&#39;sigma&#39;] = self.sigma
+
+        d_save[&#39;board&#39;] = self.board
+        d_save[&#39;kernel&#39;] = self.kernel
+
+        with open(os.path.join(DATA_PATH, filename), &#39;w&#39;) as fp: 
+            json.dump(d_save, fp, cls=NumpyArrayEncoder) # Automatic serialization of numpy arrays
+
+        return(d_save)
+
+    def plot_kernel_info(self,
+                         cmap:str=&#39;viridis&#39;, 
+                         bar:bool=False,
+                         save:str=None,
+                         ) -&gt; None:
+        &#34;&#34;&#34;Display the kernel, kernel cross-section, and growth function as a matplotlib figure.
+
+        Args:
+            kernel (np.array): The kernel to plot
+            growth_fn (object): The growth function used to update the board state
+            cmap (str, optional): The colourmap to use for plotting. Defaults to &#39;viridis&#39;.
+                                (https://matplotlib.org/stable/tutorials/colors/colormaps.html)
+            bar (bool, optional): Plot the kernel x-section as a bar or line plot. Defaults to False.
+            save (str, optional): Save the figure
+        &#34;&#34;&#34;
+        
+        k_xsection = self.kernel[self.kernel.shape[0] // 2, :]
+        k_sum = np.sum(self.kernel)
+        
+        fig, ax = plt.subplots(1, 3, figsize=(14,2), gridspec_kw={&#39;width_ratios&#39;: [1,1,2]})
+        
+        # Show kernel as heatmap
+        ax[0].imshow(self.kernel, cmap=cmap, vmin=0)
+        ax[0].title.set_text(&#39;Kernel&#39;)
+        
+        # Show kernel cross-section
+        ax[1].title.set_text(&#39;Kernel Cross-section&#39;)
+        if bar==True:
+            ax[1].bar(range(0,len(k_xsection)), k_xsection, width=1)
+        else:
+            ax[1].plot(k_xsection)
+        
+        # Growth function
+        ax[2].title.set_text(&#39;Growth Function&#39;)
+        x = np.linspace(0, k_sum, 1000)
+        ax[2].plot(x, self.growth(x))
+        
+        if save:
+            print(&#39;Saving kernel and growth function info to&#39;, os.path.join(OUTPUT_PATH, &#39;kernel_info&#39;))
+            plt.savefig(os.path.join(OUTPUT_PATH, &#39;kernel_info.png&#39;) )</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="lenia_lh.Growth_fn" href="#lenia_lh.Growth_fn">Growth_fn</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="lenia_lh.Automaton.animate"><code class="name flex">
+<span>def <span class="ident">animate</span></span>(<span>self, frames: int, interval: float = 50, blit=True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The main input point for creating a cellular automata animation.
+Simulates and renders the cellular automata as a matplotlib.animation.FuncAnimation.
+This can then be saved using ffmpeg.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>frames</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of frames/timesteps to simulate.</dd>
+<dt><strong><code>interval</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The time between frames in milliseconds. Defaults to 50.</dd>
+<dt><strong><code>blit</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to use blitting to render the images. This improves the performace
+by reducing the amount of unnecessary pixel updates. Defaults to False.
+<a href="https://matplotlib.org/3.5.0/tutorials/advanced/blitting.html">https://matplotlib.org/3.5.0/tutorials/advanced/blitting.html</a></dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def animate(self, 
+            frames:int, 
+            interval:float=50, 
+            blit=True,
+            ):
+    &#34;&#34;&#34;The main input point for creating a cellular automata animation. 
+    Simulates and renders the cellular automata as a matplotlib.animation.FuncAnimation.
+    This can then be saved using ffmpeg.
+
+    Args:
+        frames (int): The number of frames/timesteps to simulate.
+        interval (float, optional): The time between frames in milliseconds. Defaults to 50.
+        blit (bool, optional): Whether to use blitting to render the images. This improves the performace
+                by reducing the amount of unnecessary pixel updates. Defaults to False.
+                https://matplotlib.org/3.5.0/tutorials/advanced/blitting.html
+    &#34;&#34;&#34;
+    # Animate Lenia
+    self.anim = matplotlib.animation.FuncAnimation(self.fig, self.animate_step, 
+                                            frames=frames, interval=interval, save_count=MAX_FRAMES, blit=blit)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.animate_step"><code class="name flex">
+<span>def <span class="ident">animate_step</span></span>(<span>self, i: int) ‑> <function imshow at 0x7f184ce01280></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update the board and perform a single timestep of animation.
+Used by 'animate' to update and render the board after each iteration, returns the relevent frame. </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>i</code></strong> :&ensp;<code>int</code></dt>
+<dd>Dummy variable for animation. Represents the frame number</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>plt.axes.imshow</code></dt>
+<dd>The rendered image of the board at the next timestep</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def animate_step(self, i:int) -&gt; plt.imshow:
+    &#34;&#34;&#34;Update the board and perform a single timestep of animation.
+    Used by &#39;animate&#39; to update and render the board after each iteration, returns the relevent frame. 
+
+    Args:
+        i (int): Dummy variable for animation. Represents the frame number
+
+    Returns:
+        plt.axes.imshow: The rendered image of the board at the next timestep
+    &#34;&#34;&#34;
+    
+    self.update_convolutional() # update the board
+    self.img.set_array(self.board) # render the updated state 
+    return self.img,</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.normalise_kernel"><code class="name flex">
+<span>def <span class="ident">normalise_kernel</span></span>(<span>self) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Normalise the kernel such the values sum to 1.
+This makes generalisations much easier and ensures that the range of the neighbourhood sums is independent
+of the kernel used.
+Ensures the values of the growth function are robust to rescaling of the board/kernel. </p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting normlised kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def normalise_kernel(self) -&gt; np.array:
+    &#34;&#34;&#34;Normalise the kernel such the values sum to 1. 
+    This makes generalisations much easier and ensures that the range of the neighbourhood sums is independent 
+    of the kernel used. 
+    Ensures the values of the growth function are robust to rescaling of the board/kernel. 
+
+    Returns:
+        np.array: The resulting normlised kernel
+    &#34;&#34;&#34;
+    kernel_norm = self.kernel / (1*np.sum(self.kernel))
+    self.norm_factor = 1/ (1*np.sum(self.kernel))
+    self.kernel = kernel_norm 
+    return kernel_norm</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.plot_kernel_info"><code class="name flex">
+<span>def <span class="ident">plot_kernel_info</span></span>(<span>self, cmap: str = 'viridis', bar: bool = False, save: str = None) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Display the kernel, kernel cross-section, and growth function as a matplotlib figure.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>kernel</code></strong> :&ensp;<code>np.array</code></dt>
+<dd>The kernel to plot</dd>
+<dt><strong><code>growth_fn</code></strong> :&ensp;<code>object</code></dt>
+<dd>The growth function used to update the board state</dd>
+<dt><strong><code>cmap</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>The colourmap to use for plotting. Defaults to 'viridis'.
+(<a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">https://matplotlib.org/stable/tutorials/colors/colormaps.html</a>)</dd>
+<dt><strong><code>bar</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Plot the kernel x-section as a bar or line plot. Defaults to False.</dd>
+<dt><strong><code>save</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Save the figure</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plot_kernel_info(self,
+                     cmap:str=&#39;viridis&#39;, 
+                     bar:bool=False,
+                     save:str=None,
+                     ) -&gt; None:
+    &#34;&#34;&#34;Display the kernel, kernel cross-section, and growth function as a matplotlib figure.
+
+    Args:
+        kernel (np.array): The kernel to plot
+        growth_fn (object): The growth function used to update the board state
+        cmap (str, optional): The colourmap to use for plotting. Defaults to &#39;viridis&#39;.
+                            (https://matplotlib.org/stable/tutorials/colors/colormaps.html)
+        bar (bool, optional): Plot the kernel x-section as a bar or line plot. Defaults to False.
+        save (str, optional): Save the figure
+    &#34;&#34;&#34;
+    
+    k_xsection = self.kernel[self.kernel.shape[0] // 2, :]
+    k_sum = np.sum(self.kernel)
+    
+    fig, ax = plt.subplots(1, 3, figsize=(14,2), gridspec_kw={&#39;width_ratios&#39;: [1,1,2]})
+    
+    # Show kernel as heatmap
+    ax[0].imshow(self.kernel, cmap=cmap, vmin=0)
+    ax[0].title.set_text(&#39;Kernel&#39;)
+    
+    # Show kernel cross-section
+    ax[1].title.set_text(&#39;Kernel Cross-section&#39;)
+    if bar==True:
+        ax[1].bar(range(0,len(k_xsection)), k_xsection, width=1)
+    else:
+        ax[1].plot(k_xsection)
+    
+    # Growth function
+    ax[2].title.set_text(&#39;Growth Function&#39;)
+    x = np.linspace(0, k_sum, 1000)
+    ax[2].plot(x, self.growth(x))
+    
+    if save:
+        print(&#39;Saving kernel and growth function info to&#39;, os.path.join(OUTPUT_PATH, &#39;kernel_info&#39;))
+        plt.savefig(os.path.join(OUTPUT_PATH, &#39;kernel_info.png&#39;) )</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.save_animation"><code class="name flex">
+<span>def <span class="ident">save_animation</span></span>(<span>self, filename: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Save a matplotlib.animation.FuncAnimation using ffmpeg/PIL.</p>
+<p>Saves in ./outputs by default
+Supported file types:
+- .mp4
+- .gif</p>
+<p>The file type is inferred from the filename extension</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>The filename (with extension) to save</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_animation(self, 
+                   filename:str,
+                   ):
+    &#34;&#34;&#34;Save a matplotlib.animation.FuncAnimation using ffmpeg/PIL.
+    
+    Saves in ./outputs by default
+    Supported file types:
+     - .mp4
+     - .gif
+     
+    The file type is inferred from the filename extension
+
+    Args:
+        filename (str): The filename (with extension) to save
+
+    &#34;&#34;&#34;
+    if not self.anim:
+        raise Exception(&#39;ERROR: Run animation before attempting to save&#39;)
+        return 
+    
+    fmt = os.path.splitext(filename)[1] # isolate the file extension
+    
+    try: # make outputs folder if not already exists
+        os.makedirs(OUTPUT_PATH)
+    except FileExistsError:
+        # directory already exists
+        pass
+
+    if fmt == &#39;.gif&#39;:
+        f = os.path.join(OUTPUT_PATH, filename) 
+        writer = matplotlib.animation.PillowWriter(fps=30) 
+        self.anim.save(f, writer=writer)
+    elif fmt == &#39;.mp4&#39;:
+        f = os.path.join(OUTPUT_PATH, filename) 
+        writer = matplotlib.animation.FFMpegWriter(fps=30) 
+        self.anim.save(f, writer=writer)
+    else:
+        raise Exception(&#39;ERROR: Unknown save format. Must be .gif or .mp4&#39;)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.save_json"><code class="name flex">
+<span>def <span class="ident">save_json</span></span>(<span>self, filename: str) ‑> dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a state dictionary which holds the current values of the board, kernel, growth function parameters
+and native parameters. Save as a .json file </p>
+<p>Allows restoration of a board state at a later time. Used to store species/interesting results.
+Files are stored in ./datafiles by default.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>str</code></dt>
+<dd>The filename (including extension). </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dict</code></dt>
+<dd>The state dict used to create the .json file.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_json(self, 
+              filename:str,
+              ) -&gt; dict:
+    &#34;&#34;&#34;Create a state dictionary which holds the current values of the board, kernel, growth function parameters
+    and native parameters. Save as a .json file 
+    
+    Allows restoration of a board state at a later time. Used to store species/interesting results.
+    Files are stored in ./datafiles by default.
+    
+    Args:
+        filename (str): The filename (including extension). 
+
+    Returns:
+        dict: The state dict used to create the .json file. 
+    &#34;&#34;&#34;
+    
+    fmt = os.path.splitext(filename)[1]
+    
+    try: # make outputs folder if not already exists
+        os.makedirs(DATA_PATH)
+    except FileExistsError: # directory already exists
+        pass
+    
+    if not fmt == &#39;.json&#39;:
+        raise Exception(&#39;ERROR: Must save as .json&#39;)
+        
+    d_save = {}
+
+    d_save[&#39;dt&#39;] = self.dT
+    d_save[&#39;cmap&#39;] = self.cmap
+
+    d_save[&#39;type&#39;] = self.type
+    d_save[&#39;s1&#39;] = self.s1
+    d_save[&#39;s2&#39;] = self.s2
+    d_save[&#39;b1&#39;] = self.b1
+    d_save[&#39;b2&#39;] = self.b2
+    d_save[&#39;mu&#39;] = self.mu
+    d_save[&#39;sigma&#39;] = self.sigma
+
+    d_save[&#39;board&#39;] = self.board
+    d_save[&#39;kernel&#39;] = self.kernel
+
+    with open(os.path.join(DATA_PATH, filename), &#39;w&#39;) as fp: 
+        json.dump(d_save, fp, cls=NumpyArrayEncoder) # Automatic serialization of numpy arrays
+
+    return(d_save)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.show_board"><code class="name flex">
+<span>def <span class="ident">show_board</span></span>(<span>self, display: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create figure to display the board.
+Used to animate each frame during the simulation.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>display</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Show the figure</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>tuple(plt.figure, plt.imshow): Figure and axes items for the board at timestate t.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def show_board(self, 
+               display:bool=False,
+               ):
+    &#34;&#34;&#34;Create figure to display the board. 
+    Used to animate each frame during the simulation.
+
+    Args:
+        display (bool, optional): Show the figure
+
+    Returns:
+        tuple(plt.figure, plt.imshow): Figure and axes items for the board at timestate t.
+    &#34;&#34;&#34;
+    dpi = 50 # Using a higher dpi will result in higher quality graphics but will significantly affect computation
+
+    self.fig = plt.figure(figsize=(10*np.shape(self.board)[1]/dpi, 10*np.shape(self.board)[0]/dpi), dpi=dpi)
+
+    ax = self.fig.add_axes([0, 0, 1, 1])
+    ax.axis(&#39;off&#39;)
+    
+    self.img = ax.imshow(self.board, cmap=self.cmap, interpolation=&#39;none&#39;, aspect=1, vmin=0) #  vmax=vmax
+    
+    if display:
+        plt.show()
+    else: # Do not show intermediate figures when creating animations (very slow)
+        plt.close()
+
+    return self.fig, self.img</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.update_convolutional"><code class="name flex">
+<span>def <span class="ident">update_convolutional</span></span>(<span>self) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update the board state using the convolution method to calculate the neighbourhood sum</p>
+<p>f(x,y,t+1) = g(k*f(x,y,t))</p>
+<p>where
+<br>
+f(x,y,t) is the state at time t
+k is the kernel (e.g. Extended Moore neighbourhood)
+g is the growth function
+n.b. the operator '*' represents the convolution operator</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The updated board f(x,y,t+1)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_convolutional(self) -&gt; np.array:
+    &#34;&#34;&#34;Update the board state using the convolution method to calculate the neighbourhood sum
+    
+    f(x,y,t+1) = g(k*f(x,y,t))
+    
+    where         
+    f(x,y,t) is the state at time t
+    k is the kernel (e.g. Extended Moore neighbourhood)
+    g is the growth function
+    n.b. the operator &#39;*&#39; represents the convolution operator
+    
+    Returns:
+        np.array: The updated board f(x,y,t+1)
+    &#34;&#34;&#34;
+    
+    # Calculate the neighbourhood sum by convolution with the kernel.
+    # Use periodic boundary conditions to &#39;wrap&#39; the grid in the x and y dimensions
+    neighbours = scipy.signal.convolve2d(self.board, self.kernel, mode=&#39;same&#39;, boundary=&#39;wrap&#39;)
+    
+    # Update the board as per the growth function and timestep dT, clipping values to the range 0..1
+    self.board = np.clip(self.board + self.dT * self.growth(neighbours), 0, 1)
+    
+    return self.board</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Automaton.update_rule_default"><code class="name flex">
+<span>def <span class="ident">update_rule_default</span></span>(<span>self, neighbours: <built-in function array>) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Update the board using the classic rules from Conway's game of life:</p>
+<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life</a>
+Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+Any live cell with two or three live neighbours lives on to the next generation.
+Any live cell with more than three live neighbours dies, as if by overpopulation.
+Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>neighbours</code></strong> :&ensp;<code>np.array</code></dt>
+<dd>The neighbourhood sums U(x,y)</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The updated board f(x,y,t+1) at time t+1</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def update_rule_default(self, 
+                        neighbours:np.array
+                        ) -&gt; np.array:
+    &#34;&#34;&#34;Update the board using the classic rules from Conway&#39;s game of life:
+    
+    https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+    Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+    Any live cell with two or three live neighbours lives on to the next generation.
+    Any live cell with more than three live neighbours dies, as if by overpopulation.
+    Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+    Args:
+        neighbours (np.array): The neighbourhood sums U(x,y)
+
+    Returns:
+        np.array: The updated board f(x,y,t+1) at time t+1 
+    &#34;&#34;&#34;
+    r1 = (neighbours == 3) # 3 neighbours -&gt; lives
+    r2 = np.logical_and(self.board, (neighbours == 2)) # 2 neighbours and alive -&gt; lives
+    r3 = np.logical_or(r1,r2).astype(int) # all other -&gt; dead
+    return r3</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="lenia_lh.Growth_fn" href="#lenia_lh.Growth_fn">Growth_fn</a></b></code>:
+<ul class="hlist">
+<li><code><a title="lenia_lh.Growth_fn.growth_bosco" href="#lenia_lh.Growth_fn.growth_bosco">growth_bosco</a></code></li>
+<li><code><a title="lenia_lh.Growth_fn.growth_conway" href="#lenia_lh.Growth_fn.growth_conway">growth_conway</a></code></li>
+<li><code><a title="lenia_lh.Growth_fn.growth_gaussian" href="#lenia_lh.Growth_fn.growth_gaussian">growth_gaussian</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="lenia_lh.Board"><code class="flex name class">
+<span>class <span class="ident">Board</span></span>
+<span>(</span><span>grid_size: int = 16, seed: int = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for the cellular automata board. Holds the state values at each timestep.
+Initialise boards with different initial conditions:
+- Ones
+- Zeros
+- Random values
+- Sparse random values
+- Gaussian distributed conditions
+- Radially-symmetric conditions</p>
+<p><em>summary</em></p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>grid_size</code></strong> :&ensp;<code>int</code></dt>
+<dd>The size of the array used to store the values for the cellular automata</dd>
+<dt><strong><code>seed</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The random seed used during board creation. Set the seed to obtain reproducible</dd>
+</dl>
+<p>reults with random boards. Defaults to None.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Board(object):
+    &#34;&#34;&#34;Class for the cellular automata board. Holds the state values at each timestep.
+    Initialise boards with different initial conditions:
+        - Ones
+        - Zeros
+        - Random values
+        - Sparse random values 
+        - Gaussian distributed conditions
+        - Radially-symmetric conditions
+    &#34;&#34;&#34;
+    def __init__(self, 
+                 grid_size:int=16, 
+                 seed:int=None):
+        &#34;&#34;&#34;_summary_
+
+        Args:
+            grid_size (int): The size of the array used to store the values for the cellular automata
+            seed (int, optional): The random seed used during board creation. Set the seed to obtain reproducible
+            reults with random boards. Defaults to None.
+            
+        &#34;&#34;&#34;
+        self.grid_size = grid_size
+        self.density = 0.5 # Sparsity
+        self.initialisation_type=&#39;sparse&#39;
+        self.pad = 32
+        
+        self.seed = seed
+    
+        self.board = self.intialise_board()
+        
+    def intialise_board(self) -&gt; np.array:
+        &#34;&#34;&#34;Create an array used to store the values for the cellular automata.
+        
+         Initialise boards with different initial conditions:
+        - Ones
+        - Zeros
+        - Random values
+        - Sparse random values 
+            - Density
+        - Gaussian distributed conditions
+        - Radially-symmetric conditions
+
+        Returns:
+            np.array: The intitialised board at t=0
+        &#34;&#34;&#34;
+        np.random.seed(self.seed)
+        if self.initialisation_type == &#39;zeros&#39;: 
+            self.board = np.zeros([self.grid_size, self.grid_size])
+
+        elif self.initialisation_type == &#39;ones&#39;: 
+            self.board = np.ones([self.grid_size, self.grid_size])
+            
+        elif self.initialisation_type == &#39;random&#39;: 
+            self.board = np.random.rand(self.grid_size, self.grid_size)
+            
+        elif self.initialisation_type == &#39;sparse&#39;: 
+            self.board = scipy.sparse.random(self.grid_size, self.grid_size, density=self.density).A
+            
+        elif self.initialisation_type == &#39;gaussian&#39;:
+            R = self.grid_size/2
+            self.board = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+            
+        elif self.initialisation_type == &#39;ring&#39;:
+            self.board = Kernel().smooth_ring_kernel(32)
+        
+        if self.pad:
+            self.board = np.pad(self.board, self.pad)
+            
+        return self.board  </code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="lenia_lh.Board.intialise_board"><code class="name flex">
+<span>def <span class="ident">intialise_board</span></span>(<span>self) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create an array used to store the values for the cellular automata.</p>
+<p>Initialise boards with different initial conditions:
+- Ones
+- Zeros
+- Random values
+- Sparse random values
+- Density
+- Gaussian distributed conditions
+- Radially-symmetric conditions</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The intitialised board at t=0</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def intialise_board(self) -&gt; np.array:
+    &#34;&#34;&#34;Create an array used to store the values for the cellular automata.
+    
+     Initialise boards with different initial conditions:
+    - Ones
+    - Zeros
+    - Random values
+    - Sparse random values 
+        - Density
+    - Gaussian distributed conditions
+    - Radially-symmetric conditions
+
+    Returns:
+        np.array: The intitialised board at t=0
+    &#34;&#34;&#34;
+    np.random.seed(self.seed)
+    if self.initialisation_type == &#39;zeros&#39;: 
+        self.board = np.zeros([self.grid_size, self.grid_size])
+
+    elif self.initialisation_type == &#39;ones&#39;: 
+        self.board = np.ones([self.grid_size, self.grid_size])
+        
+    elif self.initialisation_type == &#39;random&#39;: 
+        self.board = np.random.rand(self.grid_size, self.grid_size)
+        
+    elif self.initialisation_type == &#39;sparse&#39;: 
+        self.board = scipy.sparse.random(self.grid_size, self.grid_size, density=self.density).A
+        
+    elif self.initialisation_type == &#39;gaussian&#39;:
+        R = self.grid_size/2
+        self.board = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+        
+    elif self.initialisation_type == &#39;ring&#39;:
+        self.board = Kernel().smooth_ring_kernel(32)
+    
+    if self.pad:
+        self.board = np.pad(self.board, self.pad)
+        
+    return self.board  </code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="lenia_lh.Growth_fn"><code class="flex name class">
+<span>class <span class="ident">Growth_fn</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for the growth function which is used to update the board based on the neighbourhood sum.
+This replaces the traditional conditional update used in Conway's game of life and can be generalised to any
+continous function. </p>
+<p>f(x,y,t+1) = g(k*f(x,y,t))</p>
+<p>where g is the growth function
+k is the update kernel
+f(x,y,t) is the board state at time t
+N.b. The operator * is the convolution operator </p>
+<p>It consists of growth and shrink parts, which act on the neighbourhood sum to update the board at each timestep.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Growth_fn(object):
+    &#34;&#34;&#34;Class for the growth function which is used to update the board based on the neighbourhood sum.
+    This replaces the traditional conditional update used in Conway&#39;s game of life and can be generalised to any
+    continous function. 
+    
+    f(x,y,t+1) = g(k*f(x,y,t))
+    
+    where g is the growth function
+    k is the update kernel 
+    f(x,y,t) is the board state at time t
+    N.b. The operator * is the convolution operator 
+    
+    It consists of growth and shrink parts, which act on the neighbourhood sum to update the board at each timestep.
+    &#34;&#34;&#34;
+    def __init__(self):
+        
+        # Values for Bosco&#39;s update rule
+        self.b1 = 2*0.125
+        self.b2 = 4*0.125
+        self.s1 = 3*0.125
+        self.s2 = 4*0.125
+        
+        # Values for Gaussian update rule
+        self.mu = 0.135
+        self.sigma = 0.015
+        
+        # Use Gaussian by default (Lenia)
+        self.type = &#39;gaussian&#39;
+        if self.type == &#39;gaussian&#39;:
+            self.growth_fn = self.growth_gaussian
+        elif self.type == &#39;bosco&#39;:
+            self.growth_fn = self.growth_bosco
+    
+    def growth_conway(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Conditinal update rule for Conway&#39;s game of life
+        b1..b2 is birth range, s1..s2 is stable range (outside s1..s2 is the shrink range) 
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        return 0 + (U==3) - ((U&lt;2)|(U&gt;3))
+    
+    def growth_bosco(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Bosco&#39;s rule update for an extended Moore neighbourhood
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        return 0 + ((U&gt;=self.b1)&amp;(U&lt;self.b2)) - ((U&lt;self.s1)|(U&gt;=self.s2))
+    
+    def growth_gaussian(self, U:np.array) -&gt; np.array:
+        &#34;&#34;&#34;Use a smooth Gaussian growth function to update the board, based on the neighbourhood sum.
+        This is the function used by Lenia to achive smooth, fluid-like patterns.
+
+        Args:
+            U (np.array): The neighbourhood sum 
+
+        Returns:
+            np.array: The updated board at time t = t+1
+        &#34;&#34;&#34;
+        gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+        return gaussian(U, self.mu, self.sigma)*2-1</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="lenia_lh.Automaton" href="#lenia_lh.Automaton">Automaton</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="lenia_lh.Growth_fn.growth_bosco"><code class="name flex">
+<span>def <span class="ident">growth_bosco</span></span>(<span>self, U: <built-in function array>) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Bosco's rule update for an extended Moore neighbourhood</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>U</code></strong> :&ensp;<code>np.array</code></dt>
+<dd>The neighbourhood sum </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The updated board at time t = t+1</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def growth_bosco(self, U:np.array) -&gt; np.array:
+    &#34;&#34;&#34;Bosco&#39;s rule update for an extended Moore neighbourhood
+
+    Args:
+        U (np.array): The neighbourhood sum 
+
+    Returns:
+        np.array: The updated board at time t = t+1
+    &#34;&#34;&#34;
+    return 0 + ((U&gt;=self.b1)&amp;(U&lt;self.b2)) - ((U&lt;self.s1)|(U&gt;=self.s2))</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Growth_fn.growth_conway"><code class="name flex">
+<span>def <span class="ident">growth_conway</span></span>(<span>self, U: <built-in function array>) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Conditinal update rule for Conway's game of life
+b1..b2 is birth range, s1..s2 is stable range (outside s1..s2 is the shrink range) </p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>U</code></strong> :&ensp;<code>np.array</code></dt>
+<dd>The neighbourhood sum </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The updated board at time t = t+1</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def growth_conway(self, U:np.array) -&gt; np.array:
+    &#34;&#34;&#34;Conditinal update rule for Conway&#39;s game of life
+    b1..b2 is birth range, s1..s2 is stable range (outside s1..s2 is the shrink range) 
+
+    Args:
+        U (np.array): The neighbourhood sum 
+
+    Returns:
+        np.array: The updated board at time t = t+1
+    &#34;&#34;&#34;
+    return 0 + (U==3) - ((U&lt;2)|(U&gt;3))</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Growth_fn.growth_gaussian"><code class="name flex">
+<span>def <span class="ident">growth_gaussian</span></span>(<span>self, U: <built-in function array>) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Use a smooth Gaussian growth function to update the board, based on the neighbourhood sum.
+This is the function used by Lenia to achive smooth, fluid-like patterns.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>U</code></strong> :&ensp;<code>np.array</code></dt>
+<dd>The neighbourhood sum </dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The updated board at time t = t+1</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def growth_gaussian(self, U:np.array) -&gt; np.array:
+    &#34;&#34;&#34;Use a smooth Gaussian growth function to update the board, based on the neighbourhood sum.
+    This is the function used by Lenia to achive smooth, fluid-like patterns.
+
+    Args:
+        U (np.array): The neighbourhood sum 
+
+    Returns:
+        np.array: The updated board at time t = t+1
+    &#34;&#34;&#34;
+    gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+    return gaussian(U, self.mu, self.sigma)*2-1</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="lenia_lh.Kernel"><code class="flex name class">
+<span>class <span class="ident">Kernel</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for the kernel used during convolution update of each timestep of Lenia
+Create a variety of kernels:
+- Square kernel
+- (Interpolated) circle kernel
+- (Interpolated) ring kernel
+- Gaussian smoothed ring kernel
+- Multiple ring kernel</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Kernel(object):
+    &#34;&#34;&#34;Class for the kernel used during convolution update of each timestep of Lenia
+    Create a variety of kernels:
+     - Square kernel
+     - (Interpolated) circle kernel
+     - (Interpolated) ring kernel
+     - Gaussian smoothed ring kernel
+     - Multiple ring kernel
+    &#34;&#34;&#34;
+    def __init__(self):
+        self.kernel = self.smooth_ring_kernel(16)
+        
+    def square_kernel(self, 
+                      outer_diameter:int, 
+                      inner_diameter:int,
+                      ) -&gt; np.array:
+        &#34;&#34;&#34;Create a square kernel for Moore neighbourhood, or extended Moore neighbourhood calculation
+        
+        e.g. 3,1 -&gt;
+            111
+            101
+            111
+            
+        e.g. 5,3 -&gt;
+            11111
+            10001
+            10001
+            10001
+            11111
+
+        Args:
+            outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size)
+            inner_diameter (int): The inner diameter of the kernel zeros
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        # Check that both diameters are either odd or even, else kernel is asymmetric
+        if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)): # both even
+            print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+            return None
+        if outer_diameter &lt;= inner_diameter:
+            print(&#39;ERROR: Outer diameter (= {}) must be greater than inner (= {})&#39;.format(outer_diameter,inner_diameter))
+            return None
+
+        inner = np.pad(np.ones([inner_diameter,inner_diameter]),(outer_diameter-inner_diameter) // 2)
+        outer = np.ones([outer_diameter,outer_diameter])
+
+        return outer - inner
+    
+    def circular_kernel(self, 
+                        diameter:int, 
+                        invert:bool=False,
+                        ) -&gt; np.array:
+        &#34;&#34;&#34;Create an interpolated circle kernel. 
+        Used by self.ring_kernel
+        
+        e.g. 5 -&gt;
+        
+        01110
+        11111
+        11111
+        11111
+        01110
+        
+        e.g. 7 -&gt;
+        
+        0011100
+        0111110
+        1111111
+        1111111
+        0111110
+        0011100
+
+        Args:
+            diameter (int): The outer diameter of the kernel (equal to the kernel size)
+            invert (bool, optional): Whether to inver the values. Defaults to False.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        
+
+        mid = (diameter - 1) / 2
+        distances = np.indices((diameter, diameter)) - np.array([mid, mid])[:, None, None]
+        kernel = ((np.linalg.norm(distances, axis=0) - diameter/2) &lt;= 0).astype(int)
+        if invert:
+            return np.logical_not(kernel).astype(int)
+        
+        return kernel
+
+    def ring_kernel(self, 
+                    outer_diameter:int, 
+                    inner_diameter:int
+                    ) -&gt; np.array:
+        &#34;&#34;&#34;Create a binary, interpolated ring-like kernel. 
+        Removes orthogonal bias, allowing isotropic patterns to form.
+
+        Args:
+            outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            inner_diameter (int): The inner diameter of the kernel zeros.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)):
+            print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+            return None
+
+        inner = np.pad(self.circular_kernel(inner_diameter),(outer_diameter-inner_diameter) // 2)
+        outer = self.circular_kernel(outer_diameter)
+
+        return outer - inner
+    
+    def smooth_ring_kernel(self, 
+                           diameter:int, 
+                           mu:float=0.5, 
+                           sigma:float=0.15
+                           ) -&gt; np.array:
+        &#34;&#34;&#34;Generate a smooth ring kernel by applying a bell-shaped (Gaussian) function to the kernel.
+        Used by kernel_shell
+
+        Args:
+            diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+            sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        R = (diameter / 2) + 1 # radius
+        gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+        D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+        
+        return (D&lt;1) * gaussian(D, mu, sigma)
+    
+    def kernel_shell(self, 
+                     diameter:int, 
+                     peaks:np.array(float)=np.array([1/2, 2/3, 1]), 
+                     mu:float=0.5, 
+                     sigma:float=0.15, 
+                     a:float=4.0
+                     ) -&gt; np.array:
+        &#34;&#34;&#34;Extend the kernal to multiple smooth rings (&#39;shells&#39;).
+        The number of shells can be changed by changing the number of items in &#39;peaks&#39;.
+        Shells are created equidistantly from the centre to the diameter.
+        This allows the evolution of more interesting and diverse creatures.
+
+        Args:
+            diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+            peaks (np.array, optional): The amplitude of the peaks for the shells, from inner to outer. 
+                Defaults to np.array([1/2, 2/3, 1]).
+            mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+            sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+            a (float, optional): The pre-factor for gaussian smoothing. Defaults to 4.0.
+
+        Returns:
+            np.array: The resulting kernel
+        &#34;&#34;&#34;
+        R = int(diameter / 2) + 1
+        D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+        k = len(peaks)
+        kr = k * D
+
+        peak = peaks[np.minimum(np.floor(kr).astype(int), k-1)]
+        gaussian = lambda x, m, s: a*np.exp(-( (x-m)**2 / (2*s**2) ))
+
+        return (D&lt;1) * gaussian(kr % 1, mu, sigma) * peakv</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="lenia_lh.Kernel.circular_kernel"><code class="name flex">
+<span>def <span class="ident">circular_kernel</span></span>(<span>self, diameter: int, invert: bool = False) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create an interpolated circle kernel.
+Used by self.ring_kernel</p>
+<p>e.g. 5 -&gt;</p>
+<p>01110
+11111
+11111
+11111
+01110</p>
+<p>e.g. 7 -&gt;</p>
+<p>0011100
+0111110
+1111111
+1111111
+0111110
+0011100</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The outer diameter of the kernel (equal to the kernel size)</dd>
+<dt><strong><code>invert</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Whether to inver the values. Defaults to False.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def circular_kernel(self, 
+                    diameter:int, 
+                    invert:bool=False,
+                    ) -&gt; np.array:
+    &#34;&#34;&#34;Create an interpolated circle kernel. 
+    Used by self.ring_kernel
+    
+    e.g. 5 -&gt;
+    
+    01110
+    11111
+    11111
+    11111
+    01110
+    
+    e.g. 7 -&gt;
+    
+    0011100
+    0111110
+    1111111
+    1111111
+    0111110
+    0011100
+
+    Args:
+        diameter (int): The outer diameter of the kernel (equal to the kernel size)
+        invert (bool, optional): Whether to inver the values. Defaults to False.
+
+    Returns:
+        np.array: The resulting kernel
+    &#34;&#34;&#34;
+    
+
+    mid = (diameter - 1) / 2
+    distances = np.indices((diameter, diameter)) - np.array([mid, mid])[:, None, None]
+    kernel = ((np.linalg.norm(distances, axis=0) - diameter/2) &lt;= 0).astype(int)
+    if invert:
+        return np.logical_not(kernel).astype(int)
+    
+    return kernel</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Kernel.kernel_shell"><code class="name flex">
+<span>def <span class="ident">kernel_shell</span></span>(<span>self, diameter: int, peaks: array(<class 'float'>, dtype=object) = array([0.5
+, 0.66666667, 1.
+]), mu: float = 0.5, sigma: float = 0.15, a: float = 4.0) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Extend the kernal to multiple smooth rings ('shells').
+The number of shells can be changed by changing the number of items in 'peaks'.
+Shells are created equidistantly from the centre to the diameter.
+This allows the evolution of more interesting and diverse creatures.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The outer diameter of the kernel ones (equal to the kernel size).</dd>
+<dt><strong><code>peaks</code></strong> :&ensp;<code>np.array</code>, optional</dt>
+<dd>The amplitude of the peaks for the shells, from inner to outer.
+Defaults to np.array([1/2, 2/3, 1]).</dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The mean value for Gaussian smoothing. Defaults to 0.5.</dd>
+<dt><strong><code>sigma</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The stdev value for Gaussian smoothing. Defaults to 0.15.</dd>
+<dt><strong><code>a</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The pre-factor for gaussian smoothing. Defaults to 4.0.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def kernel_shell(self, 
+                 diameter:int, 
+                 peaks:np.array(float)=np.array([1/2, 2/3, 1]), 
+                 mu:float=0.5, 
+                 sigma:float=0.15, 
+                 a:float=4.0
+                 ) -&gt; np.array:
+    &#34;&#34;&#34;Extend the kernal to multiple smooth rings (&#39;shells&#39;).
+    The number of shells can be changed by changing the number of items in &#39;peaks&#39;.
+    Shells are created equidistantly from the centre to the diameter.
+    This allows the evolution of more interesting and diverse creatures.
+
+    Args:
+        diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+        peaks (np.array, optional): The amplitude of the peaks for the shells, from inner to outer. 
+            Defaults to np.array([1/2, 2/3, 1]).
+        mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+        sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+        a (float, optional): The pre-factor for gaussian smoothing. Defaults to 4.0.
+
+    Returns:
+        np.array: The resulting kernel
+    &#34;&#34;&#34;
+    R = int(diameter / 2) + 1
+    D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+    k = len(peaks)
+    kr = k * D
+
+    peak = peaks[np.minimum(np.floor(kr).astype(int), k-1)]
+    gaussian = lambda x, m, s: a*np.exp(-( (x-m)**2 / (2*s**2) ))
+
+    return (D&lt;1) * gaussian(kr % 1, mu, sigma) * peakv</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Kernel.ring_kernel"><code class="name flex">
+<span>def <span class="ident">ring_kernel</span></span>(<span>self, outer_diameter: int, inner_diameter: int) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a binary, interpolated ring-like kernel.
+Removes orthogonal bias, allowing isotropic patterns to form.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>outer_diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The outer diameter of the kernel ones (equal to the kernel size).</dd>
+<dt><strong><code>inner_diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The inner diameter of the kernel zeros.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ring_kernel(self, 
+                outer_diameter:int, 
+                inner_diameter:int
+                ) -&gt; np.array:
+    &#34;&#34;&#34;Create a binary, interpolated ring-like kernel. 
+    Removes orthogonal bias, allowing isotropic patterns to form.
+
+    Args:
+        outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+        inner_diameter (int): The inner diameter of the kernel zeros.
+
+    Returns:
+        np.array: The resulting kernel
+    &#34;&#34;&#34;
+    if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)):
+        print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+        return None
+
+    inner = np.pad(self.circular_kernel(inner_diameter),(outer_diameter-inner_diameter) // 2)
+    outer = self.circular_kernel(outer_diameter)
+
+    return outer - inner</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Kernel.smooth_ring_kernel"><code class="name flex">
+<span>def <span class="ident">smooth_ring_kernel</span></span>(<span>self, diameter: int, mu: float = 0.5, sigma: float = 0.15) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Generate a smooth ring kernel by applying a bell-shaped (Gaussian) function to the kernel.
+Used by kernel_shell</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The outer diameter of the kernel ones (equal to the kernel size).</dd>
+<dt><strong><code>mu</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The mean value for Gaussian smoothing. Defaults to 0.5.</dd>
+<dt><strong><code>sigma</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>The stdev value for Gaussian smoothing. Defaults to 0.15.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def smooth_ring_kernel(self, 
+                       diameter:int, 
+                       mu:float=0.5, 
+                       sigma:float=0.15
+                       ) -&gt; np.array:
+    &#34;&#34;&#34;Generate a smooth ring kernel by applying a bell-shaped (Gaussian) function to the kernel.
+    Used by kernel_shell
+
+    Args:
+        diameter (int): The outer diameter of the kernel ones (equal to the kernel size).
+        mu (float, optional): The mean value for Gaussian smoothing. Defaults to 0.5.
+        sigma (float, optional): The stdev value for Gaussian smoothing. Defaults to 0.15.
+
+    Returns:
+        np.array: The resulting kernel
+    &#34;&#34;&#34;
+    R = (diameter / 2) + 1 # radius
+    gaussian = lambda x, m, s: np.exp(-( (x-m)**2 / (2*s**2) ))
+    D = np.linalg.norm(np.asarray(np.ogrid[-R:R-1, -R:R-1]) + 1) / R
+    
+    return (D&lt;1) * gaussian(D, mu, sigma)</code></pre>
+</details>
+</dd>
+<dt id="lenia_lh.Kernel.square_kernel"><code class="name flex">
+<span>def <span class="ident">square_kernel</span></span>(<span>self, outer_diameter: int, inner_diameter: int) ‑> <built-in function array></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Create a square kernel for Moore neighbourhood, or extended Moore neighbourhood calculation</p>
+<p>e.g. 3,1 -&gt;
+111
+101
+111</p>
+<p>e.g. 5,3 -&gt;
+11111
+10001
+10001
+10001
+11111</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>outer_diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The outer diameter of the kernel ones (equal to the kernel size)</dd>
+<dt><strong><code>inner_diameter</code></strong> :&ensp;<code>int</code></dt>
+<dd>The inner diameter of the kernel zeros</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.array</code></dt>
+<dd>The resulting kernel</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def square_kernel(self, 
+                  outer_diameter:int, 
+                  inner_diameter:int,
+                  ) -&gt; np.array:
+    &#34;&#34;&#34;Create a square kernel for Moore neighbourhood, or extended Moore neighbourhood calculation
+    
+    e.g. 3,1 -&gt;
+        111
+        101
+        111
+        
+    e.g. 5,3 -&gt;
+        11111
+        10001
+        10001
+        10001
+        11111
+
+    Args:
+        outer_diameter (int): The outer diameter of the kernel ones (equal to the kernel size)
+        inner_diameter (int): The inner diameter of the kernel zeros
+
+    Returns:
+        np.array: The resulting kernel
+    &#34;&#34;&#34;
+    # Check that both diameters are either odd or even, else kernel is asymmetric
+    if not ((outer_diameter % 2 == 0) and (inner_diameter % 2 == 0) or (outer_diameter % 2 == 1) and (inner_diameter % 2 == 1)): # both even
+        print(&#39;ERROR: Use both odd or both even dimensions to ensure kernel symmetry&#39;)
+        return None
+    if outer_diameter &lt;= inner_diameter:
+        print(&#39;ERROR: Outer diameter (= {}) must be greater than inner (= {})&#39;.format(outer_diameter,inner_diameter))
+        return None
+
+    inner = np.pad(np.ones([inner_diameter,inner_diameter]),(outer_diameter-inner_diameter) // 2)
+    outer = np.ones([outer_diameter,outer_diameter])
+
+    return outer - inner</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="lenia_lh.NumpyArrayEncoder"><code class="flex name class">
+<span>class <span class="ident">NumpyArrayEncoder</span></span>
+<span>(</span><span>*, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, sort_keys=False, indent=None, separators=None, default=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Custom instace of JSONEncoder.
+Incorperates automatic serialisation of numpy arrays.
+Used to save/load the board and kernel states.
+</p>
+<p>Constructor for JSONEncoder, with sensible defaults.</p>
+<p>If skipkeys is false, then it is a TypeError to attempt
+encoding of keys that are not str, int, float or None.
+If
+skipkeys is True, such items are simply skipped.</p>
+<p>If ensure_ascii is true, the output is guaranteed to be str
+objects with all incoming non-ASCII characters escaped.
+If
+ensure_ascii is false, the output can contain non-ASCII characters.</p>
+<p>If check_circular is true, then lists, dicts, and custom encoded
+objects will be checked for circular references during encoding to
+prevent an infinite recursion (which would cause an OverflowError).
+Otherwise, no such check takes place.</p>
+<p>If allow_nan is true, then NaN, Infinity, and -Infinity will be
+encoded as such.
+This behavior is not JSON specification compliant,
+but is consistent with most JavaScript based encoders and decoders.
+Otherwise, it will be a ValueError to encode such floats.</p>
+<p>If sort_keys is true, then the output of dictionaries will be
+sorted by key; this is useful for regression tests to ensure
+that JSON serializations can be compared on a day-to-day basis.</p>
+<p>If indent is a non-negative integer, then JSON array
+elements and object members will be pretty-printed with that
+indent level.
+An indent level of 0 will only insert newlines.
+None is the most compact representation.</p>
+<p>If specified, separators should be an (item_separator, key_separator)
+tuple.
+The default is (', ', ': ') if <em>indent</em> is <code>None</code> and
+(',', ': ') otherwise.
+To get the most compact JSON representation,
+you should specify (',', ':') to eliminate whitespace.</p>
+<p>If specified, default is a function that gets called for objects
+that can't otherwise be serialized.
+It should return a JSON encodable
+version of the object or raise a <code>TypeError</code>.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NumpyArrayEncoder(JSONEncoder):
+    &#34;&#34;&#34;Custom instace of JSONEncoder.
+    Incorperates automatic serialisation of numpy arrays. 
+    Used to save/load the board and kernel states.  
+    &#34;&#34;&#34;
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return JSONEncoder.default(self, obj)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>json.encoder.JSONEncoder</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="lenia_lh.NumpyArrayEncoder.default"><code class="name flex">
+<span>def <span class="ident">default</span></span>(<span>self, obj)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Implement this method in a subclass such that it returns
+a serializable object for <code>o</code>, or calls the base implementation
+(to raise a <code>TypeError</code>).</p>
+<p>For example, to support arbitrary iterators, you could
+implement default like this::</p>
+<pre><code>def default(self, o):
+    try:
+        iterable = iter(o)
+    except TypeError:
+        pass
+    else:
+        return list(iterable)
+    # Let the base class default method raise the TypeError
+    return JSONEncoder.default(self, o)
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def default(self, obj):
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
+    return JSONEncoder.default(self, obj)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="lenia_lh.demo_conway" href="#lenia_lh.demo_conway">demo_conway</a></code></li>
+<li><code><a title="lenia_lh.demo_lenia" href="#lenia_lh.demo_lenia">demo_lenia</a></code></li>
+<li><code><a title="lenia_lh.demo_smooth_life" href="#lenia_lh.demo_smooth_life">demo_smooth_life</a></code></li>
+<li><code><a title="lenia_lh.handle_args" href="#lenia_lh.handle_args">handle_args</a></code></li>
+<li><code><a title="lenia_lh.load_from_json" href="#lenia_lh.load_from_json">load_from_json</a></code></li>
+<li><code><a title="lenia_lh.print_demos" href="#lenia_lh.print_demos">print_demos</a></code></li>
+<li><code><a title="lenia_lh.print_welcome" href="#lenia_lh.print_welcome">print_welcome</a></code></li>
+<li><code><a title="lenia_lh.run_simulation" href="#lenia_lh.run_simulation">run_simulation</a></code></li>
+<li><code><a title="lenia_lh.simulation_from_file" href="#lenia_lh.simulation_from_file">simulation_from_file</a></code></li>
+<li><code><a title="lenia_lh.validate_args" href="#lenia_lh.validate_args">validate_args</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="lenia_lh.Automaton" href="#lenia_lh.Automaton">Automaton</a></code></h4>
+<ul class="">
+<li><code><a title="lenia_lh.Automaton.animate" href="#lenia_lh.Automaton.animate">animate</a></code></li>
+<li><code><a title="lenia_lh.Automaton.animate_step" href="#lenia_lh.Automaton.animate_step">animate_step</a></code></li>
+<li><code><a title="lenia_lh.Automaton.normalise_kernel" href="#lenia_lh.Automaton.normalise_kernel">normalise_kernel</a></code></li>
+<li><code><a title="lenia_lh.Automaton.plot_kernel_info" href="#lenia_lh.Automaton.plot_kernel_info">plot_kernel_info</a></code></li>
+<li><code><a title="lenia_lh.Automaton.save_animation" href="#lenia_lh.Automaton.save_animation">save_animation</a></code></li>
+<li><code><a title="lenia_lh.Automaton.save_json" href="#lenia_lh.Automaton.save_json">save_json</a></code></li>
+<li><code><a title="lenia_lh.Automaton.show_board" href="#lenia_lh.Automaton.show_board">show_board</a></code></li>
+<li><code><a title="lenia_lh.Automaton.update_convolutional" href="#lenia_lh.Automaton.update_convolutional">update_convolutional</a></code></li>
+<li><code><a title="lenia_lh.Automaton.update_rule_default" href="#lenia_lh.Automaton.update_rule_default">update_rule_default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="lenia_lh.Board" href="#lenia_lh.Board">Board</a></code></h4>
+<ul class="">
+<li><code><a title="lenia_lh.Board.intialise_board" href="#lenia_lh.Board.intialise_board">intialise_board</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="lenia_lh.Growth_fn" href="#lenia_lh.Growth_fn">Growth_fn</a></code></h4>
+<ul class="">
+<li><code><a title="lenia_lh.Growth_fn.growth_bosco" href="#lenia_lh.Growth_fn.growth_bosco">growth_bosco</a></code></li>
+<li><code><a title="lenia_lh.Growth_fn.growth_conway" href="#lenia_lh.Growth_fn.growth_conway">growth_conway</a></code></li>
+<li><code><a title="lenia_lh.Growth_fn.growth_gaussian" href="#lenia_lh.Growth_fn.growth_gaussian">growth_gaussian</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="lenia_lh.Kernel" href="#lenia_lh.Kernel">Kernel</a></code></h4>
+<ul class="">
+<li><code><a title="lenia_lh.Kernel.circular_kernel" href="#lenia_lh.Kernel.circular_kernel">circular_kernel</a></code></li>
+<li><code><a title="lenia_lh.Kernel.kernel_shell" href="#lenia_lh.Kernel.kernel_shell">kernel_shell</a></code></li>
+<li><code><a title="lenia_lh.Kernel.ring_kernel" href="#lenia_lh.Kernel.ring_kernel">ring_kernel</a></code></li>
+<li><code><a title="lenia_lh.Kernel.smooth_ring_kernel" href="#lenia_lh.Kernel.smooth_ring_kernel">smooth_ring_kernel</a></code></li>
+<li><code><a title="lenia_lh.Kernel.square_kernel" href="#lenia_lh.Kernel.square_kernel">square_kernel</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="lenia_lh.NumpyArrayEncoder" href="#lenia_lh.NumpyArrayEncoder">NumpyArrayEncoder</a></code></h4>
+<ul class="">
+<li><code><a title="lenia_lh.NumpyArrayEncoder.default" href="#lenia_lh.NumpyArrayEncoder.default">default</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
