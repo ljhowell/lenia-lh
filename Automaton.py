@@ -23,7 +23,7 @@ DEMO_PATH = './demos'
 
 class NumpyArrayEncoder(JSONEncoder):
     """Custom instace of JSONEncoder.
-    Incorperates automatic serialisation of numpy arrays. 
+    Incorporates automatic serialisation of numpy arrays. 
     Used to save/load the board and kernel states.  
     """
     def default(self, obj):
