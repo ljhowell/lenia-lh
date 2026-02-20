@@ -2,11 +2,8 @@
 
 <img src="./assets/header_img.png" alt="drawing" width="800"/>
 
-# Evolving Artificial Life with Lenia SDT 
-
-## COMP5400M Bio-Inspired Computing - Assessment 2 
-
-By Lewis Howell - 201546295
+# Evolving Artificial Life with Lenia SDT
+By Lewis Howell
 
 - [Evolving Artificial Life with Lenia SDT](#evolving-artificial-life-with-lenia-sdt)
   - [COMP5400M Bio-Inspired Computing - Assessment 2](#comp5400m-bio-inspired-computing---assessment-2)
@@ -269,3 +266,4 @@ Changing the niche (parameter set such as sigma, mu and dt) can cause creatures 
 python3 Lenia.py -i ./datafiles/double_orbium.json -o destroyed_orbium.gif -m 0.11
 ```
 <img src="./assets/destroyed_orbium.gif" alt="drawing" width="300"/>
+
